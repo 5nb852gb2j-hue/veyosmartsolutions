@@ -1,0 +1,163 @@
+---
+const currentYear = new Date().getFullYear();
+
+const services = [
+	"Smart home automatisatie",
+	"WiFi & netwerken",
+	"Slimme verlichting",
+	"Camera’s & beveiliging",
+	"Audio & home cinema",
+];
+
+const socialLinks = [
+	{
+		name: "Facebook",
+		href: "https://www.facebook.com/VeYoSmartSolutions/",
+	},
+	{
+		name: "Instagram",
+		href: "https://www.instagram.com/veyosmartsolutions/",
+	},
+];
+---
+
+<footer class="relative overflow-hidden border-t border-white/10 bg-[#080808]">
+	<div
+		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+	></div>
+
+	<div
+		class="absolute -right-40 top-10 h-[420px] w-[420px] rounded-full bg-[#d4af37]/5 blur-[140px]"
+	></div>
+
+	<div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
+		<div class="grid gap-14 md:grid-cols-2 lg:grid-cols-4">
+
+			<!-- Merk -->
+			<div class="lg:col-span-1">
+				<a href="/" class="inline-flex items-center gap-2 text-2xl font-black">
+					<span class="text-[#d4af37]">VeYo</span>
+					<span class="text-white">Smart Solutions</span>
+				</a>
+
+				<p class="mt-5 text-xl font-bold text-white">
+					Slimmer wonen.
+					<span class="text-[#d4af37]">Beter leven.</span>
+				</p>
+
+				<p class="mt-5 max-w-sm leading-7 text-neutral-400">
+					Professionele smart home-oplossingen voor particulieren en kleine
+					ondernemingen in West- en Oost-Vlaanderen.
+				</p>
+			</div>
+
+			<!-- Diensten -->
+			<div>
+				<h2
+					class="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+				>
+					Diensten
+				</h2>
+
+				<ul class="mt-6 space-y-3">
+					{
+						services.map((service) => (
+							<li class="text-neutral-400">
+								<a
+									href="/#diensten"
+									class="transition hover:text-white"
+								>
+									{service}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+
+			<!-- Contact -->
+			<div>
+				<h2
+					class="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+				>
+					Contact
+				</h2>
+
+				<div class="mt-6 space-y-4 text-neutral-400">
+					<p>
+						<a
+							href="tel:+32456536037"
+							class="transition hover:text-white"
+						>
+							+32 456 53 60 37
+						</a>
+					</p>
+
+					<p>
+						<a
+							href="mailto:info@veyosmartsolutions.com"
+							class="break-all transition hover:text-white"
+						>
+							info@veyosmartsolutions.com
+						</a>
+					</p>
+
+					<p>Jabbeke</p>
+
+					<p>Actief in West- & Oost-Vlaanderen</p>
+
+					<p>BTW: BE1037811809</p>
+				</div>
+			</div>
+
+			<!-- Socials -->
+			<div>
+				<h2
+					class="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+				>
+					Volg VeYo
+				</h2>
+
+				<div class="mt-6 flex flex-col gap-3">
+					{
+						socialLinks.map((social) => (
+							<a
+								href={social.href}
+								target="_blank"
+								rel="noreferrer"
+								class="group inline-flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-neutral-300 transition hover:-translate-y-0.5 hover:border-[#d4af37]/50 hover:text-[#d4af37]"
+							>
+								<span>{social.name}</span>
+
+								<span
+									class="transition group-hover:translate-x-1"
+									aria-hidden="true"
+								>
+									→
+								</span>
+							</a>
+						))
+					}
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="mt-16 flex flex-col gap-5 border-t border-white/10 pt-8 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between"
+		>
+			<p>
+				© {currentYear} VeYo Smart Solutions. Alle rechten voorbehouden.
+			</p>
+
+			<div class="flex flex-wrap gap-x-6 gap-y-2">
+				<a href="/privacy" class="transition hover:text-white">
+					Privacy
+				</a>
+
+				<a href="/algemene-voorwaarden" class="transition hover:text-white">
+					Algemene voorwaarden
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,136 @@
+---
+const benefits = [
+	{
+		title: "Persoonlijk advies",
+		description:
+			"Geen standaardpakket, maar een oplossing die wordt afgestemd op uw woning, wensen en budget.",
+		icon: "user",
+	},
+	{
+		title: "Eén aanspreekpunt",
+		description:
+			"Van advies en materiaalkeuze tot installatie, configuratie en uitleg achteraf.",
+		icon: "home",
+	},
+	{
+		title: "Netjes geïntegreerd",
+		description:
+			"We behouden bestaande schakelaars en installaties waar mogelijk en vermijden onnodige breekwerken.",
+		icon: "tools",
+	},
+	{
+		title: "Klaar voor uitbreiding",
+		description:
+			"Uw installatie wordt zo opgebouwd dat later eenvoudig nieuwe slimme oplossingen kunnen worden toegevoegd.",
+		icon: "expand",
+	},
+];
+
+const icons = {
+	user: `
+		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="1.8"/>
+			<path d="M4.5 20c.8-4 3.2-6 7.5-6s6.7 2 7.5 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+		</svg>
+	`,
+	home: `
+		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<path d="m3 11 9-7 9 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M5.5 10.5V20h13v-9.5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+			<path d="M9.5 20v-5h5v5" stroke="currentColor" stroke-width="1.8"/>
+		</svg>
+	`,
+	tools: `
+		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<path d="M14.5 6.5a4.5 4.5 0 0 0-6 5.8L3.8 17a2 2 0 0 0 2.8 2.8l4.7-4.7a4.5 4.5 0 0 0 5.8-6l-2.5 2.5-2.2-2.2 2.1-2.9Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="m14.5 14.5 5.7 5.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+		</svg>
+	`,
+	expand: `
+		<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+			<path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="m3 8 6-6M21 8l-6-6M3 16l6 6M21 16l-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+		</svg>
+	`,
+};
+---
+
+<section id="overons" class="relative overflow-hidden bg-[#090909] py-24 sm:py-32">
+	<div
+		class="absolute right-0 top-1/2 h-[520px] w-[520px] -translate-y-1/2 rounded-full bg-[#d4af37]/8 blur-[140px]"
+	></div>
+
+	<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
+			<div>
+				<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+					Waarom VeYo?
+				</p>
+
+				<h2
+					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Technologie die werkt voor
+					<span class="text-[#d4af37]">uw dagelijks leven.</span>
+				</h2>
+
+				<p class="mt-7 max-w-xl text-lg leading-8 text-neutral-400">
+					Een slimme woning hoeft niet ingewikkeld te zijn. VeYo Smart
+					Solutions combineert persoonlijk advies, professionele plaatsing en
+					een duidelijke uitleg tot één oplossing die u echt begrijpt en
+					gebruikt.
+				</p>
+
+				<div class="mt-9 flex flex-wrap gap-4">
+					<a
+						href="#contact"
+						class="inline-flex min-h-14 items-center justify-center rounded-lg bg-[#d4af37] px-7 font-bold text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+					>
+						Bespreek uw wensen
+					</a>
+
+					<a
+						href="#projecten"
+						class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+					>
+						Bekijk onze projecten
+					</a>
+				</div>
+			</div>
+
+			<div class="grid gap-5 sm:grid-cols-2">
+				{
+					benefits.map((benefit, index) => (
+						<article
+							class:list={[
+								"group rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55 hover:bg-white/[0.055]",
+								index === 1 || index === 3 ? "sm:translate-y-8" : "",
+							]}
+						>
+							<div
+								class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+							>
+								<Fragment set:html={icons[benefit.icon]} />
+							</div>
+
+							<h3 class="mt-6 text-xl font-bold text-white">
+								{benefit.title}
+							</h3>
+
+							<p class="mt-3 leading-7 text-neutral-400">
+								{benefit.description}
+							</p>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	article svg {
+		width: 25px;
+		height: 25px;
+	}
+</style>

@@ -1,0 +1,273 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+
+const features = [
+	"Bestaande verlichting slim aangestuurd",
+	"Automatisch actief vanaf zonsondergang",
+	"Verlichting schakelt in bij beweging",
+	"Uitschakeltijd volledig instelbaar",
+	"Bestaande wandschakelaar blijft bruikbaar",
+	"Draadloze sensor zonder extra bekabeling",
+];
+---
+
+<Layout
+	title="Slimme carportverlichting | VeYo Smart Solutions"
+	description="Slimme automatisatie van bestaande carportverlichting met bewegingsdetectie, bediening via smartphone en behoud van de bestaande schakelaar."
+>
+	<Header />
+
+	<main class="bg-[#090909] text-white">
+		<section class="relative overflow-hidden pt-32">
+			<div
+				class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(212,175,55,0.18),transparent_34%)]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+				<a
+					href="/#projecten"
+					class="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 transition hover:text-[#d4af37]"
+				>
+					<span aria-hidden="true">←</span>
+					Terug naar projecten
+				</a>
+
+				<p
+					class="mt-12 text-sm font-bold uppercase tracking-[0.25em] text-[#d4af37]"
+				>
+					Verlichting & automatisatie
+				</p>
+
+				<h1
+					class="mt-5 max-w-5xl text-5xl font-black leading-[0.95] tracking-[-0.055em] sm:text-6xl lg:text-8xl"
+				>
+					Slimme
+					<span class="text-[#d4af37]">carportverlichting.</span>
+				</h1>
+
+				<p class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl">
+					Bestaande verlichting slimmer gemaakt zonder in te boeten aan
+					gebruiksgemak. Bedienbaar via smartphone, automatisch bij beweging en
+					nog steeds bruikbaar met de bestaande schakelaar.
+				</p>
+
+				<div class="mt-10 flex flex-wrap gap-3">
+					<span
+						class="rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-bold text-[#d4af37]"
+					>
+						West-Vlaanderen
+					</span>
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Slimme verlichting
+					</span>
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Bewegingsdetectie
+					</span>
+				</div>
+			</div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+				>
+					<img
+						src="/images/projects/carport-lighting/hero.jpeg"
+						alt="Slimme carportverlichting met automatisch aangestuurde ledverlichting"
+						class="h-[420px] w-full object-cover sm:h-[560px] lg:h-[700px]"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							De uitdaging
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Meer comfort zonder de bestaande bediening te verliezen.
+						</h2>
+					</div>
+
+					<div class="space-y-6 text-lg leading-8 text-neutral-400">
+						<p>
+							De carport beschikte al over ingebouwde verlichting en een
+							klassieke schakelaar aan de muur. De wens was om de verlichting
+							automatisch te laten reageren op beweging, maar zonder de
+							bestaande bediening te verwijderen.
+						</p>
+
+						<p>
+							Daarnaast moest de oplossing actief worden zodra het donker is,
+							moest de verlichting via smartphone bediend kunnen worden en
+							moesten extra kabels en breekwerken vermeden worden.
+						</p>
+					</div>
+				</div>
+
+				<div class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+					{
+						features.map((feature) => (
+							<div
+								class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+							>
+								<span
+									class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 font-bold text-[#d4af37]"
+									aria-hidden="true"
+								>
+									✓
+								</span>
+
+								<p class="leading-7 text-neutral-300">{feature}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid items-center gap-14 lg:grid-cols-2">
+					<div
+						class="overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+					>
+						<img
+							src="/images/projects/carport-lighting/detail1.jpeg"
+							alt="Overzicht van de slimme verlichting onder de carport"
+							class="h-[520px] w-full object-cover"
+						/>
+					</div>
+
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Onze oplossing
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Slimme automatisatie met behoud van de vertrouwde schakelaar.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							De bestaande verlichting werd slim aangestuurd, terwijl de
+							oorspronkelijke schakelaar volledig functioneel bleef. Zo kan de
+							verlichting nog steeds handmatig worden bediend, maar ook via een
+							smartphone of automatisatie.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Een volledig draadloze bewegingssensor activeert de verlichting
+							alleen wanneer het donker is. De brandduur na beweging kan
+							eenvoudig worden aangepast zonder nieuwe kabels te trekken of in
+							de constructie te boren.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid items-center gap-14 lg:grid-cols-2">
+					<div class="order-2 lg:order-1">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Het resultaat
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Automatisch wanneer nodig. Handmatig wanneer gewenst.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							De carportverlichting schakelt nu automatisch in bij beweging
+							vanaf zonsondergang. De ingestelde tijd bepaalt hoelang de
+							verlichting blijft branden, terwijl de bewoners altijd zelf de
+							controle behouden via de bestaande schakelaar of smartphone.
+						</p>
+
+						<div
+							class="mt-9 rounded-2xl border border-[#d4af37]/25 bg-[#d4af37]/[0.06] p-6"
+						>
+							<p class="font-bold text-white">
+								Geen extra bekabeling. Geen onnodige breekwerken. Wel meer
+								comfort en veiligheid.
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="order-1 overflow-hidden rounded-3xl border border-white/10 bg-[#111111] lg:order-2"
+					>
+						<img
+							src="/images/projects/carport-lighting/detail2.jpeg"
+							alt="Draadloze bewegingssensor voor de carportverlichting"
+							class="h-[520px] w-full object-cover"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="pb-24 sm:pb-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-12 lg:p-16"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[110px]"
+					></div>
+
+					<div
+						class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+					>
+						<div class="max-w-3xl">
+							<p
+								class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+							>
+								Een gelijkaardig project?
+							</p>
+
+							<h2
+								class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+							>
+								Maak bestaande verlichting slimmer zonder alles te vervangen.
+							</h2>
+
+							<p class="mt-6 text-lg leading-8 text-neutral-400">
+								We bekijken graag welke slimme automatisaties mogelijk zijn
+								met uw huidige installatie.
+							</p>
+						</div>
+
+						<a
+							href="/#contact"
+							class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-7 font-bold text-black transition hover:-translate-y-1 hover:bg-white"
+						>
+							Bespreek uw project
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

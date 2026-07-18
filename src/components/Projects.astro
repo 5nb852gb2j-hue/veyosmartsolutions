@@ -1,0 +1,123 @@
+---
+const projects = [
+	{
+		title: "Slimme carportverlichting",
+		category: "Verlichting & automatisatie",
+		location: "West-Vlaanderen",
+		href: "/projects/carport-lighting",
+		image: "/images/projects/carport-lighting/hero.jpeg",
+	},
+	{
+		title: "Buiten-WiFi",
+		category: "WiFi & netwerken",
+		location: "West-Vlaanderen",
+		href: "/projects/outdoor-wifi",
+		image: "/images/projects/outdoor-wifi/hero.jpeg",
+	},
+	{
+		title: "Premium Sonos Home Cinema",
+		category: "Audio & home cinema",
+		location: "West-Vlaanderen",
+		href: "/projects/sonos-installation",
+		image: "/images/projects/sonos/hero.jpeg",
+	},
+	{
+		title: "Slim netwerk & centrale rackinstallatie",
+		category: "Netwerken & smart home",
+		location: "West-Vlaanderen",
+		href: "/projects/network-rack",
+		image: "/images/projects/network-rack/hero.jpeg",
+	},
+];
+---
+
+<section
+	id="projecten"
+	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+>
+	<div
+		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+	></div>
+
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div
+			class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+		>
+			<div class="max-w-3xl">
+				<p
+					class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+				>
+					Recente projecten
+				</p>
+
+				<h2
+					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Slimme oplossingen.
+					<span class="text-[#d4af37]">Echte resultaten.</span>
+				</h2>
+
+				<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
+					Ontdek hoe we bestaande woningen en installaties slimmer,
+					comfortabeler en gebruiksvriendelijker maken.
+				</p>
+			</div>
+
+			<a
+				href="#contact"
+				class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg border border-[#d4af37] px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
+			>
+				Bespreek uw project
+			</a>
+		</div>
+
+		<div class="mt-14 grid gap-6 lg:grid-cols-2">
+			{
+				projects.map((project) => (
+					<a
+						href={project.href}
+						class="group relative block min-h-[430px] overflow-hidden rounded-2xl border border-white/10"
+					>
+						<img
+							src={project.image}
+							alt={project.title}
+							loading="lazy"
+							class="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+						/>
+
+						<div
+							class="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.96),rgba(0,0,0,0.1)_70%)]"
+						></div>
+
+						<div class="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-8">
+							<p
+								class="text-sm font-bold uppercase tracking-[0.18em] text-[#d4af37]"
+							>
+								{project.category}
+							</p>
+
+							<h3 class="mt-3 text-2xl font-black text-white sm:text-3xl">
+								{project.title}
+							</h3>
+
+							<div class="mt-5 flex items-center justify-between gap-4">
+								<p class="text-neutral-400">{project.location}</p>
+
+								<span
+									class="flex h-11 w-11 items-center justify-center rounded-full border border-[#d4af37]/50 text-xl text-[#d4af37] transition duration-300 group-hover:bg-[#d4af37] group-hover:text-black"
+									aria-hidden="true"
+								>
+									→
+								</span>
+							</div>
+						</div>
+					</a>
+				))
+			}
+		</div>
+
+		<p class="mt-8 text-sm leading-6 text-neutral-500">
+			Binnenkort verschijnen hier meer realisaties van VeYo Smart Solutions.
+		</p>
+	</div>
+</section>

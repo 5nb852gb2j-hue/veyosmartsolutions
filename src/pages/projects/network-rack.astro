@@ -1,0 +1,496 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+
+const systems = [
+	{
+		name: "TP-Link Omada Switch",
+		description:
+			"Centrale netwerkswitch voor een stabiele bekabelde verbinding tussen alle aangesloten toestellen.",
+	},
+	{
+		name: "Omada Cloud Controller",
+		description:
+			"Maakt centrale configuratie en monitoring op afstand van het netwerk mogelijk.",
+	},
+	{
+		name: "Omada Access Points",
+		description:
+			"Zorgen samen voor een stabiele en gebruiksvriendelijke WiFi-dekking over meerdere verdiepingen.",
+	},
+	{
+		name: "Extra switch bovenverdieping",
+		description:
+			"Verdeelt het netwerk verder op de bovenverdieping en voedt de aanwezige netwerkapparatuur.",
+	},
+	{
+		name: "Homey Pro",
+		description:
+			"Centrale smart home-hub voor automatisaties en koppelingen tussen slimme toestellen.",
+	},
+	{
+		name: "Eufy HomeBase 3",
+		description:
+			"Centrale opslag- en beheereenheid voor het Eufy-beveiligingssysteem.",
+	},
+	{
+		name: "Tado° Internet Bridge",
+		description:
+			"Verbindt de slimme verwarmingsregeling met het netwerk en de Tado°-omgeving.",
+	},
+];
+
+const benefits = [
+	"Centraal en overzichtelijk netwerkbeheer",
+	"Monitoring en configuratie op afstand",
+	"Stabiele verbinding voor smart home-toestellen",
+	"WiFi-dekking over meerdere verdiepingen",
+	"Eenvoudig onderhoud en foutopsporing",
+	"Klaar voor toekomstige uitbreidingen",
+];
+---
+
+<Layout
+	title="Slim netwerk & centrale rackinstallatie | VeYo Smart Solutions"
+	description="Centrale rackinstallatie met TP-Link Omada, cloudcontroller, access points en gekoppelde smart home-systemen voor een stabiel en uitbreidbaar thuisnetwerk."
+>
+	<Header />
+
+	<main class="overflow-hidden bg-[#090909] text-white">
+
+		<!-- HERO -->
+		<section class="relative overflow-hidden pt-32">
+			<div
+				class="absolute inset-0 bg-[radial-gradient(circle_at_76%_18%,rgba(212,175,55,0.18),transparent_36%)]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+				<a
+					href="/#projecten"
+					class="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 transition hover:text-[#d4af37]"
+				>
+					<span aria-hidden="true">←</span>
+					Terug naar projecten
+				</a>
+
+				<p
+					class="mt-12 text-sm font-bold uppercase tracking-[0.25em] text-[#d4af37]"
+				>
+					Netwerken & smart home
+				</p>
+
+				<h1
+					class="mt-5 max-w-5xl text-5xl font-black leading-[0.94] tracking-[-0.055em] sm:text-6xl lg:text-8xl"
+				>
+					Slim netwerk.
+					<span class="text-[#d4af37]">Volledige controle.</span>
+				</h1>
+
+				<p class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl">
+					Een centrale rackinstallatie vormt het hart van een stabiel
+					thuisnetwerk. Netwerkapparatuur en smart home-systemen werden
+					overzichtelijk samengebracht voor eenvoudig beheer, monitoring op
+					afstand en toekomstige uitbreidingen.
+				</p>
+
+				<div class="mt-10 flex flex-wrap gap-3">
+					<span
+						class="rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-bold text-[#d4af37]"
+					>
+						West-Vlaanderen
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						TP-Link Omada
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Cloud monitoring
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Smart home
+					</span>
+				</div>
+			</div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+				>
+					<img
+						src="/images/projects/network-rack/hero.jpeg"
+						alt="Centrale netwerkkast met TP-Link Omada-apparatuur en smart home-systemen"
+						class="h-[460px] w-full object-cover transition duration-700 group-hover:scale-[1.015] sm:h-[600px] lg:h-[720px]"
+					/>
+
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+					></div>
+
+					<div
+						class="absolute bottom-0 left-0 grid w-full gap-5 p-6 sm:grid-cols-4 sm:p-9"
+					>
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Categorie
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Netwerken & Smart Home
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Platform
+							</p>
+							<p class="mt-2 font-bold text-white">
+								TP-Link Omada
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Monitoring
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Omada Cloud Controller
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Uitvoering
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Plaatsing & configuratie
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- UITDAGING -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							De uitdaging
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Alle netwerk- en smart home-systemen samenbrengen in één
+							overzichtelijke infrastructuur.
+						</h2>
+					</div>
+
+					<div class="space-y-6 text-lg leading-8 text-neutral-400">
+						<p>
+							In de woning waren meerdere netwerktoestellen, access points en
+							smart home-systemen aanwezig die voortdurend met elkaar
+							communiceren. Zonder centrale structuur wordt onderhoud al snel
+							onnodig ingewikkeld.
+						</p>
+
+						<p>
+							De installatie moest overzichtelijk, stabiel en uitbreidbaar
+							worden opgebouwd. Daarnaast was monitoring op afstand belangrijk
+							om het netwerk eenvoudig te kunnen controleren en beheren.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- WAAROM EEN RACK -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid items-center gap-14 lg:grid-cols-2">
+					<div
+						class="overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+					>
+						<img
+							src="/images/projects/network-rack/detail1.jpeg"
+							alt="Overzicht van de centraal opgebouwde netwerkkast"
+							class="h-[560px] w-full object-cover"
+						/>
+					</div>
+
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							De centrale basis
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Een slimme woning is maar zo betrouwbaar als het netwerk waarop
+							ze draait.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							De rackkast brengt de belangrijkste netwerkapparatuur samen op
+							één centrale plaats. Hierdoor blijven verbindingen overzichtelijk
+							en kunnen onderhoud, foutopsporing en uitbreidingen eenvoudiger
+							worden uitgevoerd.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Niet alleen de WiFi, maar ook Homey Pro, de Eufy HomeBase 3 en
+							de Tado° verwarmingscontroller steunen op deze
+							netwerkinfrastructuur. Een stabiele basis is daarom essentieel
+							voor de volledige slimme woning.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SYSTEMEN -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Gekoppelde systemen
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl lg:text-6xl"
+					>
+						Netwerk en smart home
+						<span class="text-[#d4af37]">centraal verbonden.</span>
+					</h2>
+
+					<p class="mt-7 text-lg leading-8 text-neutral-400">
+						De installatie combineert professionele Omada-netwerkapparatuur
+						met de centrale systemen van de slimme woning.
+					</p>
+				</div>
+
+				<div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+					{
+						systems.map((system, index) => (
+							<article
+								class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55"
+							>
+								<div
+									class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition group-hover:via-[#d4af37]/80"
+								></div>
+
+								<div
+									class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 font-black text-[#d4af37]"
+								>
+									{String(index + 1).padStart(2, "0")}
+								</div>
+
+								<h3 class="mt-6 text-2xl font-black text-white">
+									{system.name}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{system.description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- OPLOSSING -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid items-center gap-14 lg:grid-cols-2">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Onze oplossing
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Centraal beheer, monitoring op afstand en ruimte voor groei.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							De TP-Link Omada-switch en cloudcontroller vormen samen de
+							centrale netwerklaag. Via de controller kan de netwerkstatus op
+							afstand worden opgevolgd en kunnen instellingen centraal worden
+							beheerd.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Een extra switch op de bovenverdieping verdeelt het netwerk
+							verder naar de aanwezige apparatuur en twee access points. Zo
+							blijft de netwerkstructuur logisch opgebouwd over meerdere
+							verdiepingen.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							De installatie werd bovendien zo opgebouwd dat later eenvoudig
+							extra access points, camera's, netwerktoestellen of andere
+							smart home-oplossingen kunnen worden toegevoegd.
+						</p>
+					</div>
+
+					<div
+						class="overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+					>
+						<img
+							src="/images/projects/network-rack/detail2.jpeg"
+							alt="Detail van de bekabeling en apparatuur in de centrale rackinstallatie"
+							class="h-[600px] w-full object-cover"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- RESULTAAT -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Het resultaat
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Een stabiele, overzichtelijke en toekomstgerichte basis.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							Netwerkapparatuur en slimme woningtechnologie zijn nu centraal
+							verbonden. De installatie is makkelijker te beheren,
+							onderhouden en uitbreiden.
+						</p>
+					</div>
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<div
+									class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+								>
+									<span
+										class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 font-bold text-[#d4af37]"
+										aria-hidden="true"
+									>
+										✓
+									</span>
+
+									<p class="leading-7 text-neutral-300">
+										{benefit}
+									</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- QUOTE -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-12 lg:p-16"
+				>
+					<div
+						class="absolute left-0 top-0 h-72 w-72 rounded-full bg-[#d4af37]/10 blur-[110px]"
+					></div>
+
+					<div class="relative max-w-4xl">
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							De basis van smart home
+						</p>
+
+						<blockquote
+							class="mt-6 text-3xl font-black leading-tight tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl"
+						>
+							“Een slim huis begint niet bij de app, maar bij een betrouwbaar
+							netwerk.”
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-12 lg:p-16"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[110px]"
+					></div>
+
+					<div
+						class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+					>
+						<div class="max-w-3xl">
+							<p
+								class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+							>
+								Klaar voor een professioneel thuisnetwerk?
+							</p>
+
+							<h2
+								class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+							>
+								Wij ontwerpen een stabiele netwerkbasis voor uw woning en
+								smart home.
+							</h2>
+
+							<p class="mt-6 text-lg leading-8 text-neutral-400">
+								Van een compacte netwerkkast tot volledige WiFi-dekking,
+								cloudbeheer en integratie van slimme toestellen: we bekijken
+								samen welke oplossing bij uw woning past.
+							</p>
+						</div>
+
+						<a
+							href="/#contact"
+							class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-7 font-bold text-black transition hover:-translate-y-1 hover:bg-white"
+						>
+							Plan een netwerkadvies
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

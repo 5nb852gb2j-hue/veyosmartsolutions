@@ -1,0 +1,126 @@
+---
+const services = [
+	{
+		icon: "⌂",
+		title: "Smart home automatisatie",
+		description:
+			"Laat verlichting, verwarming, zonwering, beveiliging en andere systemen slim samenwerken in één gebruiksvriendelijke omgeving.",
+	},
+	{
+		icon: "⌁",
+		title: "WiFi & netwerken",
+		description:
+			"Sterk en stabiel internet in elke ruimte, met professionele plaatsing en configuratie van uw netwerk.",
+	},
+	{
+		icon: "✦",
+		title: "Slimme verlichting",
+		description:
+			"Comfortabele verlichting binnen en buiten, bedienbaar via app, automatisaties, sensoren of stem.",
+	},
+	{
+		icon: "◉",
+		title: "Camera's & beveiliging",
+		description:
+			"Camera's, slimme deurbellen, alarmsystemen en sensoren voor meer controle en een veiliger gevoel.",
+	},
+	{
+		icon: "◇",
+		title: "Energie & klimaat",
+		description:
+			"Meer inzicht en comfort met energiebeheer, slimme thermostaten, airco-integraties en automatische regelingen.",
+	},
+	{
+		icon: "◖",
+		title: "Audio & home cinema",
+		description:
+			"Multiroom audio, surround sound en entertainmentoplossingen die volledig aansluiten bij uw woning.",
+	},
+];
+---
+
+<section id="diensten" class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32">
+	<div
+		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+	></div>
+
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="max-w-3xl">
+			<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+				Onze oplossingen
+			</p>
+
+			<h2
+				class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+			>
+				Alles voor een slimmer,
+				<span class="text-[#d4af37]">veiliger en comfortabeler</span>
+				gebouw.
+			</h2>
+
+			<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
+				Van één slimme schakelaar tot een volledig geïntegreerde woning:
+				VeYo Smart Solutions adviseert, installeert en configureert een
+				oplossing die echt bij u past.
+			</p>
+		</div>
+
+		<div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+			{
+				services.map((service) => (
+					<article
+						class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55 hover:bg-white/[0.055]"
+					>
+						<div
+							class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition duration-300 group-hover:via-[#d4af37]/80"
+						></div>
+
+						<div
+							class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-2xl font-bold text-[#d4af37]"
+							aria-hidden="true"
+						>
+							{service.icon}
+						</div>
+
+						<h3 class="mt-6 text-xl font-bold text-white">
+							{service.title}
+						</h3>
+
+						<p class="mt-3 leading-7 text-neutral-400">
+							{service.description}
+						</p>
+
+						<a
+							href="#contact"
+							class="mt-6 inline-flex items-center gap-2 font-bold text-[#d4af37] transition group-hover:gap-3"
+						>
+							Meer informatie
+							<span aria-hidden="true">→</span>
+						</a>
+					</article>
+				))
+			}
+		</div>
+
+		<div
+			class="mt-12 flex flex-col items-start justify-between gap-6 rounded-2xl border border-[#d4af37]/25 bg-gradient-to-r from-[#d4af37]/10 to-transparent p-7 sm:flex-row sm:items-center"
+		>
+			<div>
+				<h3 class="text-xl font-bold text-white">
+					Een specifieke oplossing in gedachten?
+				</h3>
+				<p class="mt-2 text-neutral-400">
+					We bekijken samen wat technisch mogelijk is en stellen een oplossing
+					op maat voor.
+				</p>
+			</div>
+
+			<a
+				href="#contact"
+				class="inline-flex min-h-13 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-6 font-bold text-black transition hover:-translate-y-1 hover:bg-white"
+			>
+				Bespreek uw project
+			</a>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,506 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+
+const products = [
+	{
+		name: "Sonos Arc",
+		description:
+			"Premium soundbar met Dolby Atmos voor helder, krachtig en ruimtelijk televisiegeluid.",
+	},
+	{
+		name: "Sonos Sub Gen 3",
+		description:
+			"Draadloze subwoofer voor diepe en gecontroleerde lage tonen zonder storende trillingen.",
+	},
+	{
+		name: "2× Sonos Era 300",
+		description:
+			"Draadloze surrounds op standaarden voor een meeslepende luisterervaring rondom de zitruimte.",
+	},
+];
+
+const benefits = [
+	"Meeslepend Dolby Atmos-surroundgeluid",
+	"Krachtige en gecontroleerde basweergave",
+	"Draadloze surroundspeakers achteraan",
+	"Eenvoudige bediening via de Sonos-app",
+	"Netjes geïntegreerd in de leefruimte",
+	"Uitbreidbaar met andere Sonos-producten",
+];
+
+const gallery = [
+	{
+		src: "/images/projects/sonos/sonos-1.jpeg",
+		alt: "Zwarte Sonos Sub geplaatst naast de glazen schuifdeur",
+		className: "lg:row-span-2",
+	},
+	{
+		src: "/images/projects/sonos/sonos-2.jpeg",
+		alt: "Sonos Sub opgesteld aan de raamzijde van de woonkamer",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-3.jpeg",
+		alt: "Detailbeeld van de zwarte Sonos Sub in de leefruimte",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-4.jpeg",
+		alt: "Witte Sonos Era 300 geplaatst op een zwarte luidsprekerstandaard",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-5.jpeg",
+		alt: "Detailbeeld van een witte Sonos Era 300 op standaard",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-6.jpeg",
+		alt: "Overzicht van de moderne woonkamer met de Sonos-installatie",
+		className: "sm:col-span-2",
+	},
+	{
+		src: "/images/projects/sonos/sonos-8.jpeg",
+		alt: "Sonos Sub gezien vanuit de woonkamer richting de glazen schuifdeur",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-9.jpeg",
+		alt: "Zwarte Sonos Sub netjes geïntegreerd aan de zijkant van de leefruimte",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-10.jpeg",
+		alt: "Sonos Sub opgesteld nabij de raamzijde van de woning",
+		className: "",
+	},
+	{
+		src: "/images/projects/sonos/sonos-11.jpeg",
+		alt: "Detailbeeld van de Sonos Sub naast het televisiemeubel",
+		className: "",
+	},
+];
+---
+
+<Layout
+	title="Premium Sonos Home Cinema | VeYo Smart Solutions"
+	description="Premium Sonos home cinema met Sonos Arc, Sub Gen 3 en twee Era 300-speakers, professioneel geplaatst en geconfigureerd door VeYo Smart Solutions."
+>
+	<Header />
+
+	<main class="overflow-hidden bg-[#090909] text-white">
+
+		<!-- HERO -->
+		<section class="relative overflow-hidden pt-32">
+			<div
+				class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(212,175,55,0.18),transparent_36%)]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+				<a
+					href="/#projecten"
+					class="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 transition hover:text-[#d4af37]"
+				>
+					<span aria-hidden="true">←</span>
+					Terug naar projecten
+				</a>
+
+				<p
+					class="mt-12 text-sm font-bold uppercase tracking-[0.25em] text-[#d4af37]"
+				>
+					Audio & home cinema
+				</p>
+
+				<h1
+					class="mt-5 max-w-5xl text-5xl font-black leading-[0.94] tracking-[-0.055em] sm:text-6xl lg:text-8xl"
+				>
+					Bioscoopgeluid
+					<span class="text-[#d4af37]">in de woonkamer.</span>
+				</h1>
+
+				<p class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl">
+					Een complete Sonos home cinema met Arc, Sub Gen 3 en twee
+					Era 300-speakers voor een krachtige en ruimtelijke luisterervaring
+					bij films, series en muziek.
+				</p>
+
+				<div class="mt-10 flex flex-wrap gap-3">
+					<span
+						class="rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-bold text-[#d4af37]"
+					>
+						West-Vlaanderen
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Sonos
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Dolby Atmos
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Surround audio
+					</span>
+				</div>
+			</div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+				>
+					<img
+						src="/images/projects/sonos/hero.jpeg"
+						alt="Overzicht van de moderne woonkamer met de geïntegreerde Sonos-installatie"
+						class="h-[440px] w-full object-cover transition duration-700 group-hover:scale-[1.015] sm:h-[580px] lg:h-[720px]"
+					/>
+
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"
+					></div>
+
+					<div
+						class="absolute bottom-0 left-0 grid w-full gap-5 p-6 sm:grid-cols-3 sm:p-9"
+					>
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Categorie
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Audio & Home Cinema
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Systeem
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Sonos Dolby Atmos
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Uitvoering
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Plaatsing & configuratie
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- UITDAGING -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							De uitdaging
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Krachtig bioscoopgeluid zonder een klassieke installatie vol
+							kabels.
+						</h2>
+					</div>
+
+					<div class="space-y-6 text-lg leading-8 text-neutral-400">
+						<p>
+							De wens was om de woonkamer uit te rusten met een volwaardig
+							home cinemasysteem, zonder grote luidsprekers of zichtbare
+							bekabeling die het interieur zouden overheersen.
+						</p>
+
+						<p>
+							Het systeem moest zowel films en series als muziek krachtig en
+							ruimtelijk weergeven. Tegelijk moest de bediening eenvoudig en
+							gebruiksvriendelijk blijven.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PRODUCTEN -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						De installatie
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl lg:text-6xl"
+					>
+						Een complete Sonos-opstelling voor
+						<span class="text-[#d4af37]">ruimtelijk geluid.</span>
+					</h2>
+
+					<p class="mt-7 text-lg leading-8 text-neutral-400">
+						De verschillende Sonos-componenten werden geplaatst, gekoppeld,
+						geconfigureerd en als één compleet home cinemasysteem ingesteld.
+					</p>
+				</div>
+
+				<div class="mt-14 grid gap-5 lg:grid-cols-3">
+					{
+						products.map((product, index) => (
+							<article
+								class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55"
+							>
+								<div
+									class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition group-hover:via-[#d4af37]/80"
+								></div>
+
+								<div
+									class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 font-black text-[#d4af37]"
+								>
+									{String(index + 1).padStart(2, "0")}
+								</div>
+
+								<h3 class="mt-6 text-2xl font-black text-white">
+									{product.name}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{product.description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- OPLOSSING -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid items-center gap-14 lg:grid-cols-2">
+
+					<div class="grid grid-cols-2 gap-4">
+						<div
+							class="col-span-2 overflow-hidden rounded-3xl border border-white/10"
+						>
+							<img
+								src="/images/projects/sonos/sonos-6.jpeg"
+								alt="Overzicht van de woonkamer met de Sonos-installatie"
+								class="h-[360px] w-full object-cover sm:h-[430px]"
+							/>
+						</div>
+
+						<div
+							class="overflow-hidden rounded-2xl border border-white/10"
+						>
+							<img
+								src="/images/projects/sonos/sonos-4.jpeg"
+								alt="Witte Sonos Era 300 geplaatst op een zwarte luidsprekerstandaard"
+								class="h-[260px] w-full object-cover"
+							/>
+						</div>
+
+						<div
+							class="overflow-hidden rounded-2xl border border-white/10"
+						>
+							<img
+								src="/images/projects/sonos/sonos-5.jpeg"
+								alt="Detailbeeld van de tweede witte Sonos Era 300 op standaard"
+								class="h-[260px] w-full object-cover"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Onze oplossing
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Iedere component zorgvuldig geplaatst en als één systeem
+							geconfigureerd.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							De Sonos Arc verzorgt het centrale film- en televisiegeluid.
+							De Sub Gen 3 voegt krachtige en gecontroleerde lage tonen toe.
+							De twee Era 300-speakers werden achteraan op standaarden
+							geplaatst en zorgen voor een ruimtelijke surroundervaring.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Na de plaatsing werden alle onderdelen gekoppeld en getest,
+							zodat televisie, films en muziek eenvoudig vanuit één
+							gebruiksvriendelijke omgeving kunnen worden bediend.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- RESULTAAT -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Het resultaat
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Een indrukwekkende luisterervaring zonder ingewikkelde
+							bediening.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							De woonkamer beschikt nu over een compleet home cinemasysteem
+							dat kracht, detail en ruimtelijkheid combineert met het
+							gebruiksgemak van Sonos.
+						</p>
+					</div>
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<div
+									class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+								>
+									<span
+										class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 font-bold text-[#d4af37]"
+										aria-hidden="true"
+									>
+										✓
+									</span>
+
+									<p class="leading-7 text-neutral-300">
+										{benefit}
+									</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- GALERIJ -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Fotogalerij
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+					>
+						Netjes geïntegreerd in een
+						<span class="text-[#d4af37]">moderne leefruimte.</span>
+					</h2>
+				</div>
+
+				<div
+					class="mt-14 grid auto-rows-[300px] gap-5 sm:grid-cols-2 lg:grid-cols-3"
+				>
+					{
+						gallery.map((image) => (
+							<figure
+								class:list={[
+									"group relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111]",
+									image.className,
+								]}
+							>
+								<img
+									src={image.src}
+									alt={image.alt}
+									loading="lazy"
+									class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+								/>
+
+								<div
+									class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100"
+								></div>
+							</figure>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="pb-24 sm:pb-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-12 lg:p-16"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[110px]"
+					></div>
+
+					<div
+						class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+					>
+						<div class="max-w-3xl">
+							<p
+								class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+							>
+								Ook genieten van premium geluid?
+							</p>
+
+							<h2
+								class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+							>
+								Wij adviseren, plaatsen en configureren uw Sonos-systeem op
+								maat.
+							</h2>
+
+							<p class="mt-6 text-lg leading-8 text-neutral-400">
+								Van een compacte soundbar tot een volledige Dolby
+								Atmos-opstelling: we zoeken samen naar de juiste oplossing
+								voor uw ruimte en luisterwensen.
+							</p>
+						</div>
+
+						<a
+							href="/#contact"
+							class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-7 font-bold text-black transition hover:-translate-y-1 hover:bg-white"
+						>
+							Bespreek uw Sonos-project
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
