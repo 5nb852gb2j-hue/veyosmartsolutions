@@ -1,0 +1,608 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+
+const applications = [
+	{
+		title: "Binnenverlichting",
+		description:
+			"Van functionele plafondverlichting tot slimme sfeerverlichting in woonkamers, slaapkamers en andere binnenruimtes.",
+	},
+	{
+		title: "Buitenverlichting",
+		description:
+			"Gevels, terrassen, opritten, tuinpaden en bijgebouwen voorzien van betrouwbare en slim aangestuurde verlichting.",
+	},
+	{
+		title: "Volledige automatisatie",
+		description:
+			"Verlichting automatisch laten reageren op tijd, zonsondergang, beweging, aanwezigheid of andere gebeurtenissen in de woning.",
+	},
+];
+
+const controls = [
+	{
+		title: "Smartphone",
+		description:
+			"Bedien afzonderlijke lampen, ruimtes of volledige scènes via een gebruiksvriendelijke app.",
+	},
+	{
+		title: "Bestaande schakelaar",
+		description:
+			"Waar technisch mogelijk blijft de vertrouwde bediening aan de muur gewoon bruikbaar.",
+	},
+	{
+		title: "Bewegingssensor",
+		description:
+			"Laat verlichting automatisch inschakelen wanneer iemand een ruimte, oprit of tuinzone betreedt.",
+	},
+	{
+		title: "Afstandsbediening",
+		description:
+			"Een eenvoudige draadloze bediening voor vaste scènes, dimmen en het schakelen van meerdere lampen.",
+	},
+	{
+		title: "Tijdschema",
+		description:
+			"Verlichting automatisch activeren en uitschakelen op vooraf ingestelde tijdstippen.",
+	},
+	{
+		title: "Zonsondergang",
+		description:
+			"Automatisch inschakelen wanneer het donker wordt, aangepast aan het seizoen.",
+	},
+	{
+		title: "Smart home-automatisatie",
+		description:
+			"Verlichting combineren met sensoren, beveiliging, aanwezigheid, energiebeheer en andere slimme toestellen.",
+	},
+	{
+		title: "Spraakbediening",
+		description:
+			"Bij compatibele oplossingen kan verlichting ook met een spraakassistent worden bediend.",
+	},
+];
+
+const possibilities = [
+	"Nieuwe elektrische bekabeling aanleggen",
+	"Bestaande bekabeling slim uitbreiden",
+	"Gewoon wit of instelbare kleurtemperatuur",
+	"Volledige RGB-kleurverlichting",
+	"Dimbare binnen- en buitenverlichting",
+	"Tuinhuizen en bijgebouwen aansluiten",
+	"Gevel-, terras- en opritverlichting",
+	"Automatische scènes en aanwezigheidsverlichting",
+];
+
+const benefits = [
+	"Volledig afgestemd op uw woning",
+	"Binnen én buiten toepasbaar",
+	"Niet gebonden aan één merk",
+	"Handmatige en automatische bediening combineren",
+	"Nieuwe bekabeling indien nodig",
+	"Later eenvoudig uitbreidbaar",
+];
+
+const gallery = [
+	{
+		src: "/images/projects/smart-lighting/detail1.jpeg",
+		alt: "Slimme buitenverlichting aan een moderne woning",
+		className: "sm:col-span-2 lg:row-span-2",
+	},
+	{
+		src: "/images/projects/smart-lighting/detail2.jpeg",
+		alt: "Slimme wandverlichting aan een gevel",
+		className: "",
+	},
+	{
+		src: "/images/projects/smart-lighting/detail3.jpeg",
+		alt: "Sfeervolle buitenverlichting rond een woning",
+		className: "",
+	},
+	{
+		src: "/images/projects/smart-lighting/detail4.jpeg",
+		alt: "Slimme verlichting langs een oprit of tuinpad",
+		className: "",
+	},
+	{
+		src: "/images/projects/smart-lighting/detail5.jpeg",
+		alt: "Detail van een slim geplaatst verlichtingsarmatuur",
+		className: "",
+	},
+	{
+		src: "/images/projects/smart-lighting/detail6.jpeg",
+		alt: "Slimme binnenverlichting in een woning",
+		className: "sm:col-span-2",
+	},
+	{
+		src: "/images/projects/smart-lighting/detail7.jpeg",
+		alt: "Binnen- of buitenverlichting geïntegreerd in de woning",
+		className: "",
+	},
+];
+---
+
+<Layout
+	title="Slimme verlichting binnen en buiten | VeYo Smart Solutions"
+	description="Slimme verlichting op maat voor binnen en buiten: smartphonebediening, sensoren, schema’s, kleuren, nieuwe bekabeling en volledige automatisatie."
+>
+	<Header />
+
+	<main class="overflow-hidden bg-[#090909] text-white">
+
+		<!-- HERO -->
+		<section class="relative overflow-hidden pt-32">
+			<div
+				class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(212,175,55,0.18),transparent_36%)]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 pb-16 lg:px-8">
+				<a
+					href="/#projecten"
+					class="inline-flex items-center gap-2 text-sm font-bold text-neutral-400 transition hover:text-[#d4af37]"
+				>
+					<span aria-hidden="true">←</span>
+					Terug naar projecten
+				</a>
+
+				<p
+					class="mt-12 text-sm font-bold uppercase tracking-[0.25em] text-[#d4af37]"
+				>
+					Verlichting & automatisatie
+				</p>
+
+				<h1
+					class="mt-5 max-w-6xl text-5xl font-black leading-[0.94] tracking-[-0.055em] sm:text-6xl lg:text-8xl"
+				>
+					Slimme verlichting.
+					<span class="text-[#d4af37]"> Binnen én buiten.</span>
+				</h1>
+
+				<p class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl">
+					Van één slimme lamp tot een volledig geautomatiseerd
+					verlichtingsplan. Wij realiseren oplossingen op maat met de
+					bediening, kleuren, bekabeling en automatisaties die bij uw woning
+					passen.
+				</p>
+
+				<div class="mt-10 flex flex-wrap gap-3">
+					<span
+						class="rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 px-4 py-2 text-sm font-bold text-[#d4af37]"
+					>
+						West- & Oost-Vlaanderen
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Binnen & buiten
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Wit & kleur
+					</span>
+
+					<span
+						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
+					>
+						Volledig op maat
+					</span>
+				</div>
+			</div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
+				>
+					<img
+						src="/images/projects/smart-lighting/hero.jpeg"
+						alt="Slimme verlichting binnen en buiten bij een moderne woning"
+						class="h-[500px] w-full object-cover transition duration-700 group-hover:scale-[1.015] sm:h-[620px] lg:h-[760px]"
+					/>
+
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent"
+					></div>
+
+					<div
+						class="absolute bottom-0 left-0 grid w-full gap-5 p-6 sm:grid-cols-3 sm:p-9"
+					>
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Categorie
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Slimme verlichting
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Mogelijkheden
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Binnen, buiten & automatisatie
+							</p>
+						</div>
+
+						<div>
+							<p
+								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
+							>
+								Uitvoering
+							</p>
+							<p class="mt-2 font-bold text-white">
+								Advies, bekabeling & configuratie
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- VISIE -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Zonder beperkingen
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							U heeft een idee. Wij zorgen voor de slimme oplossing.
+						</h2>
+					</div>
+
+					<div class="space-y-6 text-lg leading-8 text-neutral-400">
+						<p>
+							Iedere woning en iedere klant is anders. Daarom werken we niet
+							met één vast merk of standaardpakket. We bekijken wat u wilt
+							bereiken en zoeken daar de juiste techniek en producten bij.
+						</p>
+
+						<p>
+							Een bestaande lamp slim maken, nieuwe kabels door de tuin
+							leggen, een tuinhuis aansluiten of volledige binnen- en
+							buitenverlichting automatiseren: vrijwel iedere combinatie is
+							mogelijk.
+						</p>
+
+						<div
+							class="rounded-2xl border border-[#d4af37]/25 bg-[#d4af37]/[0.06] p-6"
+						>
+							<p class="font-bold text-white">
+								Bij VeYo denken we niet in beperkingen, maar in mogelijkheden.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- TOEPASSINGEN -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Voor iedere ruimte
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl lg:text-6xl"
+					>
+						Van functioneel licht tot
+						<span class="text-[#d4af37]"> volledige sfeerbeleving.</span>
+					</h2>
+				</div>
+
+				<div class="mt-14 grid gap-5 lg:grid-cols-3">
+					{
+						applications.map((application, index) => (
+							<article
+								class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55"
+							>
+								<div
+									class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 font-black text-[#d4af37]"
+								>
+									{String(index + 1).padStart(2, "0")}
+								</div>
+
+								<h3 class="mt-6 text-2xl font-black text-white">
+									{application.title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{application.description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- BEDIENING -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.7fr_1.3fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							U kiest de bediening
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Automatisch wanneer het kan. Handmatig wanneer u dat wilt.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							Verschillende bedieningsvormen kunnen naast elkaar blijven
+							werken. Zo blijft de verlichting voor iedereen eenvoudig te
+							gebruiken.
+						</p>
+					</div>
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						{
+							controls.map((control) => (
+								<article
+									class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+								>
+									<div
+										class="flex h-9 w-9 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 font-bold text-[#d4af37]"
+										aria-hidden="true"
+									>
+										✓
+									</div>
+
+									<h3 class="mt-5 text-xl font-black text-white">
+										{control.title}
+									</h3>
+
+									<p class="mt-3 leading-7 text-neutral-400">
+										{control.description}
+									</p>
+								</article>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOTO'S + MOGELIJKHEDEN -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid items-center gap-14 lg:grid-cols-2">
+					<div class="grid grid-cols-2 gap-4">
+						<div
+							class="col-span-2 overflow-hidden rounded-3xl border border-white/10"
+						>
+							<img
+								src="/images/projects/smart-lighting/detail1.jpeg"
+								alt="Overzicht van slimme verlichting rond een woning"
+								class="h-[420px] w-full object-cover"
+							/>
+						</div>
+
+						<div
+							class="overflow-hidden rounded-2xl border border-white/10"
+						>
+							<img
+								src="/images/projects/smart-lighting/detail2.jpeg"
+								alt="Detail van slimme buitenverlichting"
+								class="h-[300px] w-full object-cover"
+							/>
+						</div>
+
+						<div
+							class="overflow-hidden rounded-2xl border border-white/10"
+						>
+							<img
+								src="/images/projects/smart-lighting/detail6.jpeg"
+								alt="Slimme binnenverlichting"
+								class="h-[300px] w-full object-cover"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Alles is mogelijk
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							Ook wanneer nieuwe kabels of aanpassingen nodig zijn.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							Een slimme installatie stopt niet bij het koppelen van een lamp
+							aan een app. Indien nodig leggen we nieuwe bekabeling, breiden
+							we bestaande aansluitingen uit en voorzien we verlichting op
+							plaatsen waar die voordien niet aanwezig was.
+						</p>
+
+						<div class="mt-9 grid gap-4 sm:grid-cols-2">
+							{
+								possibilities.map((possibility) => (
+									<div
+										class="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] p-4"
+									>
+										<span
+											class="mt-0.5 text-[#d4af37]"
+											aria-hidden="true"
+										>
+											✓
+										</span>
+
+										<p class="leading-6 text-neutral-300">
+											{possibility}
+										</p>
+									</div>
+								))
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- RESULTAAT -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Het resultaat
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+						>
+							De juiste verlichting op ieder moment.
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							Een slimme verlichtingsinstallatie combineert comfort,
+							uitstraling en gebruiksgemak. De klant bepaalt hoe eenvoudig of
+							uitgebreid het systeem wordt.
+						</p>
+					</div>
+
+					<div class="grid gap-5 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<div
+									class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+								>
+									<span
+										class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 font-bold text-[#d4af37]"
+										aria-hidden="true"
+									>
+										✓
+									</span>
+
+									<p class="leading-7 text-neutral-300">
+										{benefit}
+									</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- GALERIJ -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Inspiratie
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+					>
+						Slimme verlichting,
+						<span class="text-[#d4af37]"> volledig op maat.</span>
+					</h2>
+				</div>
+
+				<div
+					class="mt-14 grid auto-rows-[320px] gap-5 sm:grid-cols-2 lg:grid-cols-3"
+				>
+					{
+						gallery.map((image) => (
+							<figure
+								class:list={[
+									"group relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111]",
+									image.className,
+								]}
+							>
+								<img
+									src={image.src}
+									alt={image.alt}
+									loading="lazy"
+									class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+								/>
+
+								<div
+									class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100"
+								></div>
+							</figure>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section class="py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-12 lg:p-16"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[110px]"
+					></div>
+
+					<div
+						class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
+					>
+						<div class="max-w-3xl">
+							<p
+								class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+							>
+								U vraagt. Wij realiseren.
+							</p>
+
+							<h2
+								class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
+							>
+								Vertel ons hoe uw ideale verlichting eruitziet.
+							</h2>
+
+							<p class="mt-6 text-lg leading-8 text-neutral-400">
+								Eén lamp of een volledige woning, binnen of buiten, wit of
+								kleur: we ontwerpen en installeren een oplossing die past bij
+								uw ideeën.
+							</p>
+						</div>
+
+						<a
+							href="/#contact"
+							class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-7 font-bold text-black transition hover:-translate-y-1 hover:bg-white"
+						>
+							Bespreek uw verlichting
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

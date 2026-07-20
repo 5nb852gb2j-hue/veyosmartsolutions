@@ -3,36 +3,36 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 
 const benefits = [
-	"Sterke en stabiele WiFi-dekking buiten",
-	"Naadloze overgang tussen binnen- en buitennetwerk",
-	"Weerbestendige professionele installatie",
-	"Netjes geïntegreerd onder de overkapping",
-	"Centrale configuratie via TP-Link Omada",
-	"Klaar voor uitbreiding van het netwerk",
+	"Sterke WiFi-dekking boven en beneden",
+	"Automatische roaming tussen modem en access point",
+	"Geen handmatig wisselen van netwerk",
+	"Strategische plaatsing voor maximale dekking",
+	"Behoud van de bestaande providerrouter",
+	"Eenvoudig uitbreidbaar met extra access points",
 ];
 
-const technologies = [
+const features = [
 	{
-		name: "TP-Link Omada",
+		name: "Bestaande modem behouden",
 		description:
-			"Professioneel netwerkplatform voor centrale configuratie en beheer.",
+			"De router van de internetprovider blijft gewoon actief en vormt samen met het access point één gebruiksvriendelijke WiFi-oplossing.",
 	},
 	{
-		name: "Outdoor access point",
+		name: "Strategische plaatsing",
 		description:
-			"Weerbestendig access point voor een stabiele draadloze verbinding buiten.",
+			"Het access point werd boven in een slaapkamer geplaatst, diagonaal tegenover de bestaande modem voor een betere verdeling van het signaal.",
 	},
 	{
-		name: "PoE-aansluiting",
+		name: "Automatische roaming",
 		description:
-			"Voeding en netwerkverbinding via één kabel voor een nette installatie.",
+			"Smartphones, tablets en laptops schakelen automatisch over naar het sterkste WiFi-punt zonder dat de gebruiker dit merkt.",
 	},
 ];
 ---
 
 <Layout
-	title="Outdoor WiFi-installatie | VeYo Smart Solutions"
-	description="Professionele plaatsing en configuratie van een TP-Link Omada outdoor access point voor stabiele WiFi-dekking op terras, in de tuin en rond de woning."
+	title="Indoor WiFi-installatie | VeYo Smart Solutions"
+	description="Strategisch geplaatst indoor access point voor sterke WiFi-dekking boven en beneden, automatische roaming en behoud van de bestaande providerrouter."
 >
 	<Header />
 
@@ -62,14 +62,14 @@ const technologies = [
 				<h1
 					class="mt-5 max-w-5xl text-5xl font-black leading-[0.94] tracking-[-0.055em] sm:text-6xl lg:text-8xl"
 				>
-					Sterke WiFi.
-					<span class="text-[#d4af37]"> Ook buiten.</span>
+					Sterke WiFi. 
+					<span class="text-[#d4af37]"> Overal in huis.</span>
 				</h1>
 
 				<p class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl">
-					Professionele plaatsing van een weerbestendig TP-Link Omada access
-					point voor een stabiele draadloze verbinding op het terras, in de
-					tuin en rondom de woning.
+					Een strategisch geplaatst access point op de bovenverdieping zorgt
+					samen met de bestaande modem voor een sterke en naadloze
+					WiFi-verbinding doorheen de volledige woning.
 				</p>
 
 				<div class="mt-10 flex flex-wrap gap-3">
@@ -82,19 +82,19 @@ const technologies = [
 					<span
 						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
 					>
-						TP-Link Omada
+						Indoor WiFi
 					</span>
 
 					<span
 						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
 					>
-						Outdoor WiFi
+						Mesh & roaming
 					</span>
 
 					<span
 						class="rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-neutral-300"
 					>
-						PoE
+						Strategische plaatsing
 					</span>
 				</div>
 			</div>
@@ -104,22 +104,20 @@ const technologies = [
 					class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
 				>
 					<img
-						src="/images/projects/outdoor-wifi/hero.jpeg"
-						alt="TP-Link Omada outdoor access point gemonteerd onder een houten overkapping"
+						src="/images/projects/indoor-wifi/hero.jpeg"
+						alt="Indoor access point geplaatst op de bovenverdieping voor volledige WiFi-dekking"
 						class="h-[460px] w-full object-cover transition duration-700 group-hover:scale-[1.015] sm:h-[600px] lg:h-[720px]"
 					/>
 
 					<div
-						class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"
+						class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
 					></div>
 
 					<div
 						class="absolute bottom-0 left-0 grid w-full gap-5 p-6 sm:grid-cols-3 sm:p-9"
 					>
 						<div>
-							<p
-								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
-							>
+							<p class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]">
 								Categorie
 							</p>
 							<p class="mt-2 font-bold text-white">
@@ -128,20 +126,16 @@ const technologies = [
 						</div>
 
 						<div>
-							<p
-								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
-							>
-								Technologie
+							<p class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]">
+								Opstelling
 							</p>
 							<p class="mt-2 font-bold text-white">
-								TP-Link Omada
+								Providerrouter + access point
 							</p>
 						</div>
 
 						<div>
-							<p
-								class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]"
-							>
+							<p class="text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37]">
 								Uitvoering
 							</p>
 							<p class="mt-2 font-bold text-white">
@@ -158,31 +152,30 @@ const technologies = [
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr]">
 					<div>
-						<p
-							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
-						>
+						<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
 							De uitdaging
 						</p>
 
 						<h2
 							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
 						>
-							Een betrouwbare WiFi-verbinding buiten, zonder in te boeten aan
-							snelheid of stabiliteit.
+							Volledige dekking creëren zonder de bestaande modem te
+							vervangen.
 						</h2>
 					</div>
 
 					<div class="space-y-6 text-lg leading-8 text-neutral-400">
 						<p>
-							De bestaande draadloze verbinding was voornamelijk gericht op de
-							binnenruimtes. Op het terras en verder in de tuin was het signaal
-							daardoor minder sterk en minder betrouwbaar.
+							De standaardrouter van de internetprovider stond beneden en
+							bood onvoldoende dekking op de bovenverdieping. In bepaalde
+							ruimtes was het signaal zwakker en minder stabiel.
 						</p>
 
 						<p>
-							De oplossing moest discreet worden geplaatst, geschikt zijn voor
-							buitengebruik en naadloos samenwerken met het bestaande netwerk
-							in de woning.
+							De oplossing moest de bestaande modem behouden, maar toch zorgen
+							voor een sterke verbinding boven én beneden, zonder dat
+							gebruikers handmatig tussen verschillende netwerken moesten
+							wisselen.
 						</p>
 					</div>
 				</div>
@@ -193,45 +186,37 @@ const technologies = [
 		<section class="bg-[#0d0d0d] py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="grid items-center gap-14 lg:grid-cols-2">
-
 					<div>
-						<p
-							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
-						>
+						<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
 							Onze oplossing
 						</p>
 
 						<h2
 							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
 						>
-							Strategisch geplaatst voor maximale dekking rond de woning.
+							Een access point op de juiste plaats maakt het verschil.
 						</h2>
 
 						<p class="mt-7 text-lg leading-8 text-neutral-400">
-							Het outdoor access point werd onder de houten overkapping
-							gemonteerd. Die locatie biedt bescherming, een nette afwerking en
-							een gunstige positie om het draadloze signaal over het terras en
-							de tuin te verspreiden.
+							Het access point werd boven in een slaapkamer geplaatst,
+							diagonaal tegenover de bestaande modem beneden. Zo wordt het
+							draadloze signaal beter verdeeld over de volledige woning.
 						</p>
 
 						<p class="mt-5 text-lg leading-8 text-neutral-400">
-							Het toestel werd via PoE aangesloten en geïntegreerd in de
-							TP-Link Omada-omgeving. Zo kan het access point centraal worden
-							geconfigureerd en werkt het samen met de andere netwerktoestellen
-							als één geheel.
+							De bestaande providerrouter blijft actief. Het access point
+							vult de dekking aan waar het signaal van de modem zwakker wordt,
+							zodat beide verdiepingen één sterke en gebruiksvriendelijke
+							WiFi-omgeving krijgen.
 						</p>
 					</div>
 
 					<div class="grid gap-5">
 						{
-							technologies.map((technology, index) => (
+							features.map((feature, index) => (
 								<article
 									class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55"
 								>
-									<div
-										class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition group-hover:via-[#d4af37]/80"
-									></div>
-
 									<div class="flex items-start gap-5">
 										<div
 											class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 font-black text-[#d4af37]"
@@ -241,11 +226,11 @@ const technologies = [
 
 										<div>
 											<h3 class="text-2xl font-black text-white">
-												{technology.name}
+												{feature.name}
 											</h3>
 
 											<p class="mt-3 leading-7 text-neutral-400">
-												{technology.description}
+												{feature.description}
 											</p>
 										</div>
 									</div>
@@ -257,27 +242,67 @@ const technologies = [
 			</div>
 		</section>
 
-		<!-- RESULTAAT -->
+		<!-- ROAMING -->
 		<section class="py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
 					<div>
-						<p
-							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+							Naadloze roaming
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
 						>
+							Uw toestellen kiezen automatisch het sterkste WiFi-punt.
+						</h2>
+					</div>
+
+					<div class="space-y-6 text-lg leading-8 text-neutral-400">
+						<p>
+							Een smartphone, tablet of laptop kan automatisch overschakelen
+							naar het WiFi-punt met het sterkste signaal terwijl u door de
+							woning beweegt.
+						</p>
+
+						<p>
+							Daardoor hoeft u niet zelf van netwerk te wisselen. De overgang
+							gebeurt op de achtergrond, zodat bellen, streamen en surfen zo
+							vlot mogelijk blijven verlopen.
+						</p>
+
+						<div
+							class="rounded-2xl border border-[#d4af37]/25 bg-[#d4af37]/[0.06] p-6"
+						>
+							<p class="font-bold text-white">
+								Geen aparte WiFi-netwerken per verdieping. Wel één eenvoudige
+								verbinding doorheen de woning.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- RESULTAAT -->
+		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+					<div>
+						<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
 							Het resultaat
 						</p>
 
 						<h2
 							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
 						>
-							Een stabiele verbinding van binnen tot buiten.
+							Een sterke en stabiele verbinding op beide verdiepingen.
 						</h2>
 
 						<p class="mt-7 text-lg leading-8 text-neutral-400">
-							Het terras en de omliggende buitenruimte beschikken nu over een
-							sterke en betrouwbare WiFi-verbinding die mooi aansluit op het
-							bestaande netwerk in de woning.
+							De woning beschikt nu over een betere WiFi-verdeling, zonder de
+							bestaande modem te vervangen of het dagelijkse gebruik
+							ingewikkelder te maken.
 						</p>
 					</div>
 
@@ -305,15 +330,15 @@ const technologies = [
 			</div>
 		</section>
 
-		<!-- EXTRA PROJECTFOTO -->
-		<section class="bg-[#0d0d0d] py-24 sm:py-32">
+		<!-- FOTO -->
+		<section class="py-24 sm:py-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div
 					class="relative overflow-hidden rounded-3xl border border-white/10 bg-[#111111]"
 				>
 					<img
-						src="/images/projects/outdoor-wifi/hero.jpeg"
-						alt="Detail van de geplaatste outdoor WiFi-oplossing onder de overkapping"
+						src="/images/projects/indoor-wifi/hero.jpeg"
+						alt="Netjes geplaatst indoor access point op de bovenverdieping"
 						loading="lazy"
 						class="h-[500px] w-full object-cover sm:h-[650px]"
 					/>
@@ -322,20 +347,16 @@ const technologies = [
 						class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"
 					></div>
 
-					<div
-						class="absolute inset-y-0 left-0 flex max-w-xl items-end p-8 sm:p-12"
-					>
+					<div class="absolute inset-y-0 left-0 flex max-w-xl items-end p-8 sm:p-12">
 						<div>
-							<p
-								class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
-							>
-								Professionele plaatsing
+							<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+								Discreet geplaatst
 							</p>
 
 							<h2
 								class="mt-5 text-3xl font-black leading-tight text-white sm:text-4xl"
 							>
-								Discreet gemonteerd en klaar voor jarenlang gebruik.
+								Een nette installatie die opgaat in de ruimte.
 							</h2>
 						</div>
 					</div>
@@ -344,7 +365,7 @@ const technologies = [
 		</section>
 
 		<!-- CTA -->
-		<section class="py-24 sm:py-32">
+		<section class="pb-24 sm:pb-32">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div
 					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-12 lg:p-16"
@@ -357,21 +378,21 @@ const technologies = [
 						class="relative flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
 					>
 						<div class="max-w-3xl">
-							<p
-								class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
-							>
-								Ook stabiele WiFi buiten?
+							<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+								Ook last van zwakke WiFi?
 							</p>
 
 							<h2
 								class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] sm:text-5xl"
 							>
-								Wij zorgen voor de juiste dekking, plaatsing en configuratie.
+								Wij bekijken waar een extra access point het meeste verschil
+								maakt.
 							</h2>
 
 							<p class="mt-6 text-lg leading-8 text-neutral-400">
-								Van terras en tuin tot garage, poolhouse of oprit: we
-								bekijken welke netwerkoplossing het beste past bij uw woning.
+								Van één probleemzone tot volledige dekking over meerdere
+								verdiepingen: we zoeken een oplossing die past bij uw woning
+								en bestaande netwerk.
 							</p>
 						</div>
 
