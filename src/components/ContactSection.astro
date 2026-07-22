@@ -1,121 +1,257 @@
 ---
 const voordelen = [
-  "Gratis eerste advies",
-  "Vrijblijvende offerte",
-  "Persoonlijke installatie",
-  "Actief in West- & Oost-Vlaanderen"
+	"Gratis eerste advies",
+	"Vrijblijvende offerte",
+	"Persoonlijke installatie",
+	"Actief in West- & Oost-Vlaanderen",
+];
+
+const projectTypes = [
+	"Smart home & automatisatie",
+	"WiFi & netwerken",
+	"Camera’s & beveiliging",
+	"Slimme verlichting",
+	"Audio & home cinema",
+	"Toegangscontrole",
+	"Energiebeheer",
+	"Anders",
 ];
 ---
 
-<section id="contact" class="relative bg-[#0d0d0d] py-28">
+<section
+	id="contact"
+	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+>
+	<div
+		class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(212,175,55,0.12),transparent_40%)]"
+	></div>
 
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(212,175,55,0.12),transparent_40%)]"></div>
+	<div
+		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+	></div>
 
-    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+	<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="grid items-start gap-16 lg:grid-cols-2">
 
-        <div class="grid gap-16 lg:grid-cols-2 items-center">
+			<!-- Tekst -->
+			<div class="lg:sticky lg:top-28">
+				<p
+					class="text-sm font-bold uppercase tracking-[0.3em] text-[#d4af37]"
+				>
+					Contact
+				</p>
 
-            <div>
+				<h2
+					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Klaar om uw woning
+					<span class="text-[#d4af37]"> slimmer te maken?</span>
+				</h2>
 
-                <p class="uppercase tracking-[0.3em] text-[#d4af37] font-bold text-sm">
-                    CONTACT
-                </p>
+				<p class="mt-8 text-lg leading-8 text-neutral-400">
+					Of het nu gaat om betere WiFi, slimme verlichting, beveiliging,
+					audio of een volledige smart home: we luisteren eerst naar uw
+					wensen en werken daarna een oplossing uit die echt bij u past.
+				</p>
 
-                        <h2 class="mt-5 text-5xl font-black leading-tight text-white">
-                    Klaar om uw woning 
-                     <span class="text-[#d4af37]"> slimmer te maken?
-                     </span> 
-                     
-                </h2>
+				<div class="mt-10 grid gap-5">
+					{
+						voordelen.map((item) => (
+							<div class="flex items-center gap-4">
+								<div
+									class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 font-bold text-[#d4af37]"
+								>
+									✓
+								</div>
 
-                <p class="mt-8 text-lg leading-8 text-neutral-400">
+								<span class="text-neutral-300">{item}</span>
+							</div>
+						))
+					}
+				</div>
 
-                    Of het nu gaat om betere WiFi, slimme verlichting,
-                    beveiliging of een volledige smart home...
-                    we luisteren eerst naar uw wensen en werken daarna
-                    een oplossing uit die écht bij u past.
+				<div
+					class="mt-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+				>
+					<p class="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]">
+						Rechtstreeks contact
+					</p>
 
-                </p>
+					<div class="mt-5 space-y-3 text-neutral-300">
+						<p>
+							<a
+								href="tel:+32456536037"
+								class="transition hover:text-[#d4af37]"
+							>
+								+32 456 53 60 37
+							</a>
+						</p>
 
-                <div class="mt-10 grid gap-5">
+						<p>
+							<a
+								href="mailto:info@veyosmartsolutions.com"
+								class="transition hover:text-[#d4af37]"
+							>
+								info@veyosmartsolutions.com
+							</a>
+						</p>
 
-                    {
-                        voordelen.map(item => (
+						<p>Jabbeke — West- & Oost-Vlaanderen</p>
+					</div>
+				</div>
+			</div>
 
-                            <div class="flex items-center gap-4">
+			<!-- Formulier -->
+			<div
+				class="rounded-3xl border border-white/10 bg-[#141414] p-7 shadow-2xl sm:p-9"
+			>
+				<p
+					class="text-sm font-bold uppercase tracking-[0.22em] text-[#d4af37]"
+				>
+					Vrijblijvende aanvraag
+				</p>
 
-                                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#d4af37]/10 border border-[#d4af37]/30 text-[#d4af37]">
+				<h3 class="mt-4 text-2xl font-black text-white sm:text-3xl">
+					Vertel ons kort over uw project
+				</h3>
 
-                                    ✓
+				<p class="mt-3 leading-7 text-neutral-400">
+					Vul het formulier in. We nemen zo snel mogelijk persoonlijk contact
+					met u op.
+				</p>
 
-                                </div>
+				<form
+					action="https://formspree.io/f/mykrddrg"
+					method="POST"
+					class="mt-8 space-y-5"
+				>
+					<input
+						type="hidden"
+						name="_subject"
+						value="Nieuwe aanvraag via VeYo Smart Solutions"
+					/>
 
-                                <span class="text-neutral-300">
+					<input
+						type="text"
+						name="_gotcha"
+						tabindex="-1"
+						autocomplete="off"
+						class="hidden"
+					/>
 
-                                    {item}
+					<div class="grid gap-5 sm:grid-cols-2">
+						<div>
+							<label for="name" class="mb-2 block text-sm font-bold text-white">
+								Naam *
+							</label>
 
-                                </span>
+							<input
+								id="name"
+								name="naam"
+								type="text"
+								required
+								autocomplete="name"
+								placeholder="Voor- en achternaam"
+								class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none transition placeholder:text-neutral-600 focus:border-[#d4af37]"
+							/>
+						</div>
 
-                            </div>
+						<div>
+							<label for="phone" class="mb-2 block text-sm font-bold text-white">
+								Telefoon
+							</label>
 
-                        ))
-                    }
+							<input
+								id="phone"
+								name="telefoon"
+								type="tel"
+								autocomplete="tel"
+								placeholder="+32..."
+								class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none transition placeholder:text-neutral-600 focus:border-[#d4af37]"
+							/>
+						</div>
+					</div>
 
-                </div>
+					<div>
+						<label for="email" class="mb-2 block text-sm font-bold text-white">
+							E-mailadres *
+						</label>
 
-            </div>
+						<input
+							id="email"
+							name="email"
+							type="email"
+							required
+							autocomplete="email"
+							placeholder="naam@voorbeeld.be"
+							class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none transition placeholder:text-neutral-600 focus:border-[#d4af37]"
+						/>
+					</div>
 
-            <div
-                class="rounded-3xl border border-white/10 bg-[#141414] p-8 shadow-2xl">
+					<div>
+						<label for="project" class="mb-2 block text-sm font-bold text-white">
+							Waar bent u naar op zoek?
+						</label>
 
-                <h3 class="text-2xl font-bold text-white">
+						<select
+							id="project"
+							name="projecttype"
+							class="w-full rounded-xl border border-white/10 bg-[#0c0c0c] px-5 py-4 text-white outline-none transition focus:border-[#d4af37]"
+						>
+							<option value="">Kies een categorie</option>
 
-                    Vraag vrijblijvend een offerte aan
+							{
+								projectTypes.map((type) => (
+									<option value={type}>{type}</option>
+								))
+							}
+						</select>
+					</div>
 
-                </h3>
+					<div>
+						<label for="message" class="mb-2 block text-sm font-bold text-white">
+							Vertel kort over uw project *
+						</label>
 
-                <p class="mt-3 text-neutral-400">
+						<textarea
+							id="message"
+							name="bericht"
+							rows="6"
+							required
+							placeholder="Wat wilt u graag laten installeren of verbeteren?"
+							class="w-full resize-y rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none transition placeholder:text-neutral-600 focus:border-[#d4af37]"
+						></textarea>
+					</div>
 
-                    Binnenkort kan u hier rechtstreeks een aanvraag indienen.
+					<label class="flex items-start gap-3 text-sm leading-6 text-neutral-400">
+						<input
+							type="checkbox"
+							name="privacy_akkoord"
+							required
+							class="mt-1 h-4 w-4 accent-[#d4af37]"
+						/>
 
-                </p>
+						<span>
+							Ik ga akkoord dat VeYo Smart Solutions mijn gegevens gebruikt
+							om contact op te nemen over deze aanvraag.
+						</span>
+					</label>
 
-                <div class="mt-8 space-y-5">
-
-                    <input
-                        placeholder="Naam"
-                        class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none focus:border-[#d4af37]"
-                    />
-
-                    <input
-                        placeholder="E-mailadres"
-                        class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none focus:border-[#d4af37]"
-                    />
-
-                    <input
-                        placeholder="Telefoon"
-                        class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none focus:border-[#d4af37]"
-                    />
-
-                    <textarea
-                        rows="5"
-                        placeholder="Vertel kort over uw project..."
-                        class="w-full rounded-xl border border-white/10 bg-black/30 px-5 py-4 text-white outline-none focus:border-[#d4af37]"
-                    ></textarea>
-
-                    <button
-                        class="w-full rounded-xl bg-[#d4af37] py-4 font-bold text-black transition hover:scale-[1.02]">
-
-                        Offerte aanvragen
-
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+					<button
+						type="submit"
+						class="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-[#d4af37] px-7 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+					>
+						Verstuur mijn aanvraag
+					</button>
+                        <p class="mt-5 text-center text-sm text-neutral-500">
+	                        Meestal ontvangt u binnen <span class="font-bold text-[#d4af37]">24 uur</span> een persoonlijk antwoord.
+                        </p>
+					<p class="text-center text-xs leading-5 text-neutral-600">
+						Uw gegevens worden uitsluitend gebruikt om uw aanvraag te
+						beantwoorden.
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
 </section>

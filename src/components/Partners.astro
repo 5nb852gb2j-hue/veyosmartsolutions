@@ -1,55 +1,41 @@
 ---
-const brands = [
-	{
-		name: "Homey",
-		category: "Smart home-platform",
-	},
-	{
-		name: "TP-Link Omada",
-		category: "WiFi & netwerken",
-	},
-	{
-		name: "Eufy",
-		category: "Beveiliging & smart home",
-	},
-	{
-		name: "Ajax Systems",
-		category: "Alarmsystemen",
-	},
-	{
-		name: "Sonos",
-		category: "Multiroom audio",
-	},
-	{
-		name: "Shelly",
-		category: "Slimme schakelingen",
-	},
-	{
-		name: "Ring",
-		category: "Deurbellen & camera’s",
-	},
-	{
-		name: "Nuki",
-		category: "Slimme deursloten",
-	},
-	{
-		name: "HomeWizard",
-		category: "Energiebeheer",
-	},
+const partners = [
+	{ name: "Homey", category: "Smart home-platform" },
+	{ name: "TP-Link Omada", category: "WiFi & netwerken" },
+	{ name: "Eufy", category: "Beveiliging & smart home" },
+
+	{ name: "Ring", category: "Deurbellen & camera’s" },
+	{ name: "Sonos", category: "Multiroom audio" },
+	{ name: "Shelly", category: "Slimme schakelingen" },
+
+	{ name: "Ajax Systems", category: "Alarmsystemen" },
+	{ name: "Philips Hue", category: "Slimme verlichting" },
+	{ name: "Nuki", category: "Slimme deursloten" },
+
+	{ name: "HomeWizard", category: "Energiebeheer" },
+	{ name: "Tado°", category: "Slimme verwarming" },
+	{ name: "Ubiquiti UniFi", category: "Netwerken & WiFi" },
+
+	{ name: "Sonoff", category: "Slimme modules & schakelingen" },
+	{ name: "Niko", category: "Schakelaars & woningtechniek" },
+	{ name: "Bold", category: "Slimme deursloten" },
 ];
 ---
 
-<section class="relative overflow-hidden bg-[#090909] py-24 sm:py-32">
+<section
+	id="merken"
+	class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+>
 	<div
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
 	></div>
 
 	<div
-		class="absolute left-1/2 top-1/2 h-[460px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/5 blur-[150px]"
+		class="absolute -right-40 top-20 h-[460px] w-[460px] rounded-full bg-[#d4af37]/5 blur-[150px]"
 	></div>
 
 	<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
-		<div class="mx-auto max-w-3xl text-center">
+		<div class="mx-auto max-w-4xl text-center">
 			<p
 				class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
 			>
@@ -63,36 +49,42 @@ const brands = [
 				<span class="text-[#d4af37]"> uw project.</span>
 			</h2>
 
-			<p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
-				We selecteren betrouwbare producten en platformen op basis van uw
-				wensen, bestaande installatie en budget. Niet één merk staat centraal,
-				maar de oplossing die het beste bij u past.
+			<p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-neutral-400">
+				We kiezen producten en platformen op basis van uw wensen, bestaande
+				installatie en budget. Niet één merk staat centraal, maar de oplossing
+				die het beste bij u past.
 			</p>
 		</div>
 
-		<div class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+		<div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 			{
-				brands.map((brand) => (
+				partners.map((partner) => (
 					<article
-						class="group flex min-h-32 items-center justify-between gap-5 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55 hover:bg-[#d4af37]/[0.055]"
+						class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50"
 					>
-						<div>
-							<h3
-								class="text-xl font-black tracking-[-0.025em] text-neutral-300 transition duration-300 group-hover:text-[#d4af37]"
-							>
-								{brand.name}
-							</h3>
-
-							<p class="mt-1 text-sm text-neutral-500">
-								{brand.category}
-							</p>
-						</div>
-
 						<div
-							class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-lg text-neutral-600 transition duration-300 group-hover:border-[#d4af37]/50 group-hover:text-[#d4af37]"
-							aria-hidden="true"
-						>
-							+
+							class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition duration-300 group-hover:via-[#d4af37]/80"
+						></div>
+
+						<div class="flex items-center justify-between gap-5">
+							<div>
+								<h3
+									class="text-xl font-black text-white transition group-hover:text-[#d4af37]"
+								>
+									{partner.name}
+								</h3>
+
+								<p class="mt-2 text-sm text-neutral-500">
+									{partner.category}
+								</p>
+							</div>
+
+							<span
+								class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-xl text-neutral-500 transition duration-300 group-hover:rotate-90 group-hover:border-[#d4af37]/50 group-hover:text-[#d4af37]"
+								aria-hidden="true"
+							>
+								+
+							</span>
 						</div>
 					</article>
 				))
@@ -100,14 +92,14 @@ const brands = [
 		</div>
 
 		<div
-			class="mt-10 flex flex-col items-start justify-between gap-5 rounded-2xl border border-white/10 bg-white/[0.025] p-7 sm:flex-row sm:items-center"
+			class="mt-12 flex flex-col gap-6 rounded-2xl border border-white/10 bg-white/[0.03] p-7 sm:flex-row sm:items-center sm:justify-between"
 		>
 			<div>
-				<h3 class="text-xl font-bold text-white">
+				<h3 class="text-xl font-black text-white">
 					Heeft u al slimme toestellen in huis?
 				</h3>
 
-				<p class="mt-2 text-neutral-400">
+				<p class="mt-2 leading-7 text-neutral-400">
 					We onderzoeken graag of uw bestaande producten geïntegreerd en
 					uitgebreid kunnen worden.
 				</p>
@@ -115,16 +107,15 @@ const brands = [
 
 			<a
 				href="#contact"
-				class="inline-flex min-h-13 shrink-0 items-center justify-center rounded-lg border border-[#d4af37] px-6 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
+				class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-lg border border-[#d4af37] px-6 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
 			>
 				Laat uw installatie bekijken
 			</a>
 		</div>
 
-		<p class="mt-6 text-center text-xs leading-5 text-neutral-600">
-			De vermelde merknamen zijn eigendom van hun respectieve
-			merkhouders. Productkeuze is afhankelijk van de technische vereisten
-			van ieder project.
+		<p class="mt-8 text-center text-xs leading-6 text-neutral-600">
+			De vermelde merknamen zijn eigendom van hun respectieve merkhouders.
+			Productkeuze is afhankelijk van de technische vereisten van ieder project.
 		</p>
 	</div>
 </section>

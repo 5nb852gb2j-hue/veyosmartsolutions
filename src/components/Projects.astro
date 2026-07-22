@@ -1,25 +1,26 @@
 ---
 const projects = [
-{
-	title: "Slimme videodeurbellen",
-	category: "Camera’s & beveiliging",
-	location: "West-Vlaanderen",
-	href: "/projects/smart-doorbell",
-	image: "/images/projects/smart-doorbell/ring-1.jpeg",
-},
-{
-	title: "Slimme verlichting binnen en buiten",
-	category: "Verlichting & automatisatie",
-	location: "West- & Oost-Vlaanderen",
-	href: "/projects/smart-lighting",
-	image: "/images/projects/smart-lighting/hero.jpeg",
-},
 	{
-		title: "Slimme carportverlichting",
+		title: "Slimme verlichting binnen en buiten",
 		category: "Verlichting & automatisatie",
+		location: "West- & Oost-Vlaanderen",
+		href: "/projects/smart-lighting",
+		image: "/images/projects/smart-lighting/hero.jpeg",
+		featured: true,
+	},
+	{
+		title: "Slimme videodeurbellen",
+		category: "Camera’s & beveiliging",
 		location: "West-Vlaanderen",
-		href: "/projects/carport-lighting",
-		image: "/images/projects/carport-lighting/hero.jpeg",
+		href: "/projects/smart-doorbell",
+		image: "/images/projects/smart-doorbell/ring-1.jpeg",
+	},
+	{
+		title: "Sterke WiFi in de volledige woning",
+		category: "WiFi & netwerken",
+		location: "West-Vlaanderen",
+		href: "/projects/indoor-wifi",
+		image: "/images/projects/indoor-wifi/hero.jpeg",
 	},
 	{
 		title: "Buiten-WiFi",
@@ -27,14 +28,14 @@ const projects = [
 		location: "West-Vlaanderen",
 		href: "/projects/outdoor-wifi",
 		image: "/images/projects/outdoor-wifi/hero.jpeg",
-	},{
-	title: "Sterke WiFi in de volledige woning",
-	category: "WiFi & netwerken",
-	location: "West-Vlaanderen",
-	href: "/projects/indoor-wifi",
-	image: "/images/projects/indoor-wifi/hero.jpeg",
-},
-
+	},
+	{
+		title: "Slim netwerk & centrale rackinstallatie",
+		category: "Netwerken & smart home",
+		location: "West-Vlaanderen",
+		href: "/projects/network-rack",
+		image: "/images/projects/network-rack/hero.jpeg",
+	},
 	{
 		title: "Premium Sonos Home Cinema",
 		category: "Audio & home cinema",
@@ -43,11 +44,11 @@ const projects = [
 		image: "/images/projects/sonos/hero.jpeg",
 	},
 	{
-		title: "Slim netwerk & centrale rackinstallatie",
-		category: "Netwerken & smart home",
+		title: "Slimme carportverlichting",
+		category: "Verlichting & automatisatie",
 		location: "West-Vlaanderen",
-		href: "/projects/network-rack",
-		image: "/images/projects/network-rack/hero.jpeg",
+		href: "/projects/carport-lighting",
+		image: "/images/projects/carport-lighting/hero.jpeg",
 	},
 ];
 ---
@@ -60,7 +61,11 @@ const projects = [
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
 	></div>
 
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+	<div
+		class="absolute -right-40 top-32 h-[420px] w-[420px] rounded-full bg-[#d4af37]/5 blur-[140px]"
+	></div>
+
+	<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
 		<div
 			class="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between"
 		>
@@ -68,7 +73,7 @@ const projects = [
 				<p
 					class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
 				>
-					Recente projecten
+					Onze realisaties
 				</p>
 
 				<h2
@@ -79,8 +84,8 @@ const projects = [
 				</h2>
 
 				<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
-					Ontdek hoe we bestaande woningen en installaties slimmer,
-					comfortabeler en gebruiksvriendelijker maken.
+					Ontdek hoe we woningen en installaties slimmer, comfortabeler,
+					veiliger en gebruiksvriendelijker maken.
 				</p>
 			</div>
 
@@ -97,35 +102,65 @@ const projects = [
 				projects.map((project) => (
 					<a
 						href={project.href}
-						class="group relative block min-h-[430px] overflow-hidden rounded-2xl border border-white/10"
+						class:list={[
+							"group relative block min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111] transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/45",
+							project.featured ? "lg:col-span-2 lg:min-h-[560px]" : "",
+						]}
 					>
 						<img
 							src={project.image}
 							alt={project.title}
 							loading="lazy"
-							class="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+							class="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-110"
 						/>
 
 						<div
-							class="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.96),rgba(0,0,0,0.1)_70%)]"
+							class="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent transition duration-500 group-hover:from-black group-hover:via-black/20"
 						></div>
 
-						<div class="absolute inset-x-0 bottom-0 z-10 p-7 sm:p-8">
+						<div
+							class="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100"
+						>
+							<div
+								class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.16),transparent_28%)]"
+							></div>
+						</div>
+
+						<div
+							class="absolute inset-x-0 bottom-0 z-10 p-7 transition-all duration-500 group-hover:translate-y-[-6px] sm:p-8"
+						>
 							<p
 								class="text-sm font-bold uppercase tracking-[0.18em] text-[#d4af37]"
 							>
 								{project.category}
 							</p>
 
-							<h3 class="mt-3 text-2xl font-black text-white sm:text-3xl">
+							<h3
+								class:list={[
+									"mt-3 font-black text-white transition duration-500",
+									project.featured
+										? "text-3xl sm:text-4xl lg:text-5xl"
+										: "text-2xl sm:text-3xl",
+								]}
+							>
 								{project.title}
 							</h3>
 
-							<div class="mt-5 flex items-center justify-between gap-4">
-								<p class="text-neutral-400">{project.location}</p>
+							<div class="mt-6 flex items-center justify-between gap-4">
+								<div>
+									<p class="text-neutral-400">
+										{project.location}
+									</p>
+
+									<p
+										class="mt-3 translate-y-2 text-sm font-bold text-[#d4af37] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+									>
+										Bekijk project →
+									</p>
+								</div>
 
 								<span
-									class="flex h-11 w-11 items-center justify-center rounded-full border border-[#d4af37]/50 text-xl text-[#d4af37] transition duration-300 group-hover:bg-[#d4af37] group-hover:text-black"
+									class="flex h-12 w-12 items-center justify-center rounded-full border border-[#d4af37]/50 text-xl text-[#d4af37] transition-all duration-500 group-hover:translate-x-2 group-hover:scale-110 group-hover:bg-[#d4af37] group-hover:text-black"
 									aria-hidden="true"
 								>
 									→

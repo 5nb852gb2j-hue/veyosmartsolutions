@@ -1,0 +1,134 @@
+---
+const faqs = [
+	{
+		question: "Installeren jullie ook toestellen die ik zelf heb aangekocht?",
+		answer:
+			"Ja. We bekijken eerst of de toestellen geschikt zijn voor uw woning, netwerk en gewenste toepassing. Daarna kunnen we instaan voor de plaatsing, configuratie en duidelijke uitleg.",
+	},
+	{
+		question: "Werken jullie alleen met de merken die op de website staan?",
+		answer:
+			"Nee. We werken merkonafhankelijk en kiezen per project de oplossing die technisch en financieel het beste aansluit bij uw wensen. Ook bestaande installaties en andere compatibele merken kunnen vaak geïntegreerd worden.",
+	},
+	{
+		question: "Kan mijn bestaande installatie behouden blijven?",
+		answer:
+			"Vaak wel. We proberen bestaande bekabeling, schakelaars, netwerkapparatuur en slimme toestellen waar mogelijk te behouden en slim uit te breiden. Alleen wanneer iets technisch ongeschikt of defect is, stellen we een alternatief voor.",
+	},
+	{
+		question: "Is een Homey verplicht voor een slimme woning?",
+		answer:
+			"Nee. Homey is een sterke centrale oplossing, maar niet voor ieder project noodzakelijk. Sommige installaties werken perfect via hun eigen app, sensoren, afstandsbediening of een ander platform.",
+	},
+	{
+		question: "Heb ik altijd een abonnement nodig voor camera’s of deurbellen?",
+		answer:
+			"Nee. Dat hangt af van het gekozen merk en model. Sommige systemen bieden lokale opslag zonder verplicht abonnement, terwijl andere extra functies en cloudopslag via een abonnement aanbieden.",
+	},
+	{
+		question: "Kunnen jullie nieuwe kabels leggen voor tuin, tuinhuis of gevel?",
+		answer:
+			"Ja. Nieuwe bekabeling aanleggen, bestaande aansluitingen uitbreiden en verlichting of netwerkvoorzieningen naar een tuin, gevel, terras, oprit of bijgebouw brengen behoort tot de mogelijkheden.",
+	},
+	{
+		question: "Werken jullie alleen in West-Vlaanderen?",
+		answer:
+			"VeYo Smart Solutions is gevestigd in Jabbeke en actief in West- en Oost-Vlaanderen. Voor grotere of bijzondere projecten bekijken we graag samen wat mogelijk is.",
+	},
+	{
+		question: "Krijg ik na de installatie uitleg?",
+		answer:
+			"Zeker. Na de plaatsing configureren en testen we de installatie en leggen we duidelijk uit hoe alles werkt. U krijgt geen ingewikkeld systeem zonder begeleiding.",
+	},
+	{
+		question: "Kan een installatie later nog uitgebreid worden?",
+		answer:
+			"Ja. We houden bij het advies en de installatie zoveel mogelijk rekening met toekomstige uitbreidingen, zodat later extra verlichting, camera’s, access points, sensoren of automatisaties kunnen worden toegevoegd.",
+	},
+];
+---
+
+<section
+	id="faq"
+	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+>
+	<div
+		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+	></div>
+
+	<div
+		class="absolute -left-40 top-24 h-[460px] w-[460px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+	></div>
+
+	<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+			<div class="lg:sticky lg:top-28 lg:self-start">
+				<p
+					class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+				>
+					Veelgestelde vragen
+				</p>
+
+				<h2
+					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Duidelijke antwoorden.
+					<span class="text-[#d4af37]"> Geen verrassingen.</span>
+				</h2>
+
+				<p class="mt-7 text-lg leading-8 text-neutral-400">
+					Een slimme installatie roept soms vragen op. Daarom leggen we vooraf
+					duidelijk uit wat mogelijk is, wat u nodig heeft en hoe de oplossing
+					wordt opgebouwd.
+				</p>
+
+				<a
+					href="#contact"
+					class="mt-9 inline-flex min-h-14 items-center justify-center rounded-lg border border-[#d4af37] px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
+				>
+					Stel uw eigen vraag
+				</a>
+			</div>
+
+			<div class="space-y-4">
+				{
+					faqs.map((faq, index) => (
+						<details
+							class="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 open:border-[#d4af37]/40 open:bg-[#d4af37]/[0.04]"
+						>
+							<summary
+								class="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-6 text-left sm:px-7"
+							>
+								<div class="flex items-start gap-5">
+									<span
+										class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-sm font-black text-[#d4af37]"
+										aria-hidden="true"
+									>
+										{String(index + 1).padStart(2, "0")}
+									</span>
+
+									<h3 class="text-lg font-black leading-7 text-white sm:text-xl">
+										{faq.question}
+									</h3>
+								</div>
+
+								<span
+									class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-xl text-neutral-400 transition duration-300 group-open:rotate-45 group-open:border-[#d4af37]/50 group-open:text-[#d4af37]"
+									aria-hidden="true"
+								>
+									+
+								</span>
+							</summary>
+
+							<div class="px-6 pb-7 pl-20 sm:px-7 sm:pl-[5.75rem]">
+								<p class="max-w-3xl leading-8 text-neutral-400">
+									{faq.answer}
+								</p>
+							</div>
+						</details>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</section>
