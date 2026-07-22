@@ -13,6 +13,43 @@ const {
 	description =
 		"Professionele smart home-oplossingen, netwerken, beveiliging, verlichting en automatisatie in West- en Oost-Vlaanderen.",
 } = Astro.props;
+
+const siteUrl = "https://veyosmartsolutions.com";
+const faviconUrl = `${siteUrl}/veyo-favicon.png`;
+const socialImage = `${siteUrl}/images/profile/yordi.png`;
+
+const localBusinessSchema = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	name: "VeYo Smart Solutions",
+	url: siteUrl,
+	logo: faviconUrl,
+	image: socialImage,
+	description,
+	telephone: "+32456536037",
+	email: "info@veyosmartsolutions.com",
+	vatID: "BE1037811809",
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Jabbeke",
+		addressRegion: "West-Vlaanderen",
+		addressCountry: "BE",
+	},
+	areaServed: [
+		{
+			"@type": "AdministrativeArea",
+			name: "West-Vlaanderen",
+		},
+		{
+			"@type": "AdministrativeArea",
+			name: "Oost-Vlaanderen",
+		},
+	],
+	sameAs: [
+		"https://www.facebook.com/VeYoSmartSolutions/",
+		"https://www.instagram.com/veyosmartsolutions/",
+	],
+};
 ---
 
 <!doctype html>
@@ -20,15 +57,42 @@ const {
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content={description} />
-		<meta name="theme-color" content="#090909" />
 
 		<title>{title}</title>
+
+		<meta name="description" content={description} />
+		<meta name="author" content="VeYo Smart Solutions" />
+		<meta name="theme-color" content="#090909" />
+
+		<link rel="icon" type="image/png" href="/veyo-favicon.png?v=10" />
+		<link rel="apple-touch-icon" href="/veyo-favicon.png?v=10" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="nl_BE" />
+		<meta property="og:site_name" content="VeYo Smart Solutions" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:image" content={socialImage} />
+		<meta
+			property="og:image:alt"
+			content="Yordi Verheecke van VeYo Smart Solutions"
+		/>
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={socialImage} />
+
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify(localBusinessSchema)}
+		/>
 	</head>
 
-    <body>
-	    <slot />
-	    <Footer />
-	    <WhatsAppButton />
-    </body>
+	<body>
+		<slot />
+		<Footer />
+		<WhatsAppButton />
+	</body>
 </html>
