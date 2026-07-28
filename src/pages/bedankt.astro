@@ -1,0 +1,123 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout
+	title="Bedankt voor uw aanvraag | VeYo Smart Solutions"
+	description="Uw aanvraag werd succesvol verzonden naar VeYo Smart Solutions."
+>
+	<Header />
+
+	<main class="relative flex min-h-screen items-center overflow-hidden bg-[#0d0d0d] px-6 pb-24 pt-36">
+		<div
+			class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+		></div>
+
+		<div
+			class="absolute -right-40 top-24 h-[500px] w-[500px] rounded-full bg-[#d4af37]/7 blur-[160px]"
+		></div>
+
+		<div
+			class="absolute -left-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+		></div>
+
+		<section class="relative mx-auto w-full max-w-4xl text-center">
+			<div
+				class="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 text-4xl font-black text-[#d4af37]"
+				aria-hidden="true"
+			>
+				✓
+			</div>
+
+			<p
+				class="mt-8 text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+			>
+				Aanvraag ontvangen
+			</p>
+
+			<h1
+				class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+			>
+				Bedankt voor
+				<span class="text-[#d4af37]"> uw aanvraag.</span>
+			</h1>
+
+			<p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-neutral-400">
+				Uw bericht werd succesvol verzonden naar VeYo Smart Solutions.
+				We bekijken uw aanvraag en nemen zo snel mogelijk persoonlijk contact
+				met u op.
+			</p>
+
+			<div class="mt-12 grid gap-5 text-left sm:grid-cols-3">
+				<div
+					class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+				>
+					<span class="text-sm font-black text-[#d4af37]">01</span>
+
+					<h2 class="mt-4 text-lg font-black text-white">
+						We bekijken uw vraag
+					</h2>
+
+					<p class="mt-3 leading-7 text-neutral-400">
+						We lezen uw bericht en bekijken welke oplossing het beste past.
+					</p>
+				</div>
+
+				<div
+					class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+				>
+					<span class="text-sm font-black text-[#d4af37]">02</span>
+
+					<h2 class="mt-4 text-lg font-black text-white">
+						Persoonlijk contact
+					</h2>
+
+					<p class="mt-3 leading-7 text-neutral-400">
+						We nemen contact op als we extra informatie nodig hebben.
+					</p>
+				</div>
+
+				<div
+					class="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+				>
+					<span class="text-sm font-black text-[#d4af37]">03</span>
+
+					<h2 class="mt-4 text-lg font-black text-white">
+						Duidelijk voorstel
+					</h2>
+
+					<p class="mt-3 leading-7 text-neutral-400">
+						U ontvangt een helder advies of een vrijblijvende offerte.
+					</p>
+				</div>
+			</div>
+
+			<div class="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
+				<a
+					href="/"
+					class="inline-flex min-h-14 items-center justify-center rounded-lg bg-[#d4af37] px-8 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+				>
+					Terug naar de homepage
+				</a>
+
+				<a
+					href="/#projecten"
+					class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-8 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+				>
+					Bekijk onze projecten
+				</a>
+			</div>
+
+			<p class="mt-10 text-sm leading-6 text-neutral-500">
+				Dringende vraag? Bel of WhatsApp ons via
+				<a
+					href="tel:+32456536037"
+					class="font-bold text-[#d4af37] transition hover:text-white"
+				>
+					+32 456 53 60 37
+				</a>.
+			</p>
+		</section>
+	</main>
+</Layout>

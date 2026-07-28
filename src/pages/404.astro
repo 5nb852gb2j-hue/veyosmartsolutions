@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout
+	title="Pagina niet gevonden | VeYo Smart Solutions"
+	description="De gevraagde pagina kon niet worden gevonden."
+>
+	<Header />
+
+	<main class="relative flex min-h-screen items-center overflow-hidden bg-[#0d0d0d] px-6 pb-24 pt-36">
+		<div
+			class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+		></div>
+
+		<div
+			class="absolute -right-40 top-24 h-[500px] w-[500px] rounded-full bg-[#d4af37]/7 blur-[160px]"
+		></div>
+
+		<div
+			class="absolute -left-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+		></div>
+
+		<section class="relative mx-auto w-full max-w-4xl text-center">
+			<p
+				class="text-[7rem] font-black leading-none tracking-[-0.08em] text-[#d4af37] sm:text-[10rem]"
+			>
+				404
+			</p>
+
+			<p
+				class="mt-5 text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+			>
+				Pagina niet gevonden
+			</p>
+
+			<h1
+				class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+			>
+				Hier lijkt iets
+				<span class="text-[#d4af37]"> niet helemaal slim gekoppeld.</span>
+			</h1>
+
+			<p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-neutral-400">
+				De pagina die u zoekt bestaat niet meer, werd verplaatst of het adres
+				werd verkeerd ingevoerd. Geen probleem: via de knoppen hieronder vindt
+				u snel de juiste weg terug.
+			</p>
+
+			<div class="mt-12 grid gap-5 text-left sm:grid-cols-3">
+				<a
+					href="/#diensten"
+					class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50"
+				>
+					<span class="text-sm font-black text-[#d4af37]">01</span>
+
+					<h2 class="mt-4 text-lg font-black text-white">
+						Bekijk onze diensten
+					</h2>
+
+					<p class="mt-3 leading-7 text-neutral-400">
+						Ontdek wat VeYo voor uw woning of onderneming kan betekenen.
+					</p>
+
+					<span
+						class="mt-5 inline-block font-bold text-[#d4af37] transition group-hover:translate-x-1"
+					>
+						Naar diensten →
+					</span>
+				</a>
+
+				<a
+					href="/#projecten"
+					class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50"
+				>
+					<span class="text-sm font-black text-[#d4af37]">02</span>
+
+					<h2 class="mt-4 text-lg font-black text-white">
+						Bekijk realisaties
+					</h2>
+
+					<p class="mt-3 leading-7 text-neutral-400">
+						Laat u inspireren door onze uitgevoerde installaties.
+					</p>
+
+					<span
+						class="mt-5 inline-block font-bold text-[#d4af37] transition group-hover:translate-x-1"
+					>
+						Naar projecten →
+					</span>
+				</a>
+
+				<a
+					href="/#contact"
+					class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50"
+				>
+					<span class="text-sm font-black text-[#d4af37]">03</span>
+
+					<h2 class="mt-4 text-lg font-black text-white">
+						Neem contact op
+					</h2>
+
+					<p class="mt-3 leading-7 text-neutral-400">
+						Vertel ons wat u zoekt en we helpen u persoonlijk verder.
+					</p>
+
+					<span
+						class="mt-5 inline-block font-bold text-[#d4af37] transition group-hover:translate-x-1"
+					>
+						Naar contact →
+					</span>
+				</a>
+			</div>
+
+			<div class="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
+				<a
+					href="/"
+					class="inline-flex min-h-14 items-center justify-center rounded-lg bg-[#d4af37] px-8 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+				>
+					Terug naar de homepage
+				</a>
+
+				<a
+					href="https://wa.me/32456536037?text=Hallo%20Yordi%2C%20ik%20kan%20iets%20niet%20vinden%20op%20de%20website%20van%20VeYo%20Smart%20Solutions."
+					target="_blank"
+					rel="noreferrer"
+					class="inline-flex min-h-14 items-center justify-center rounded-lg border border-[#25D366]/50 px-8 font-bold text-[#25D366] transition duration-300 hover:-translate-y-1 hover:bg-[#25D366] hover:text-black"
+				>
+					Vraag hulp via WhatsApp
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
