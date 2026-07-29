@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import WhatsAppButton from "../components/WhatsAppButton.astro";
+import CookieBanner from '../components/CookieBanner.astro';
 
 interface Props {
 	title?: string;
@@ -120,5 +121,6 @@ const localBusinessSchema = {
 		<slot />
 		<Footer />
 		<WhatsAppButton />
+		<CookieBanner />
 	</body>
 </html>
