@@ -17,7 +17,7 @@ const {
 
 const siteUrl = "https://veyosmartsolutions.com";
 const faviconUrl = `${siteUrl}/veyo-favicon.png`;
-const socialImage = `${siteUrl}/images/profile/yordi.png`;
+const socialImage = `${siteUrl}/og-image.png`;
 
 const localBusinessSchema = {
 	"@context": "https://schema.org",
@@ -75,9 +75,12 @@ const localBusinessSchema = {
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={siteUrl} />
 		<meta property="og:image" content={socialImage} />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 		<meta
 			property="og:image:alt"
-			content="Yordi Verheecke van VeYo Smart Solutions"
+			content="VeYo Smart Solutions logo"
 		/>
 
 		<meta name="twitter:card" content="summary_large_image" />
