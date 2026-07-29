@@ -88,6 +88,32 @@ const localBusinessSchema = {
 			type="application/ld+json"
 			set:html={JSON.stringify(localBusinessSchema)}
 		/>
+
+		<!-- Google Analytics: standaard geen toestemming -->
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    wait_for_update: 500
+  });
+
+  gtag('js', new Date());
+  gtag('config', 'G-F18859SKSZ');
+</script>
+
+<script
+  is:inline
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-F18859SKSZ"
+></script>
 	</head>
 
 	<body>
