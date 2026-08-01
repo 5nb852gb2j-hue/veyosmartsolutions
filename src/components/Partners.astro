@@ -1,4 +1,9 @@
 ---
+import {
+	BadgeCheck,
+	SearchCheck,
+} from "lucide-astro";
+
 const partners = [
 	{ name: "Homey", category: "Smart home-platform" },
 	{ name: "TP-Link Omada", category: "WiFi & netwerken" },
@@ -25,6 +30,7 @@ const partners = [
 <section
 	id="merken"
 	class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+	aria-labelledby="merken-titel"
 >
 	<div
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
@@ -43,6 +49,7 @@ const partners = [
 			</p>
 
 			<h2
+				id="merken-titel"
 				class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
 			>
 				Merken die passen bij
@@ -52,7 +59,7 @@ const partners = [
 			<p class="mx-auto mt-7 max-w-3xl text-lg leading-8 text-neutral-400">
 				We kiezen producten en platformen op basis van uw wensen, bestaande
 				installatie en budget. Niet één merk staat centraal, maar de oplossing
-				die het beste bij u past.
+				die technisch, praktisch en financieel het beste bij uw project past.
 			</p>
 		</div>
 
@@ -60,30 +67,38 @@ const partners = [
 			{
 				partners.map((partner) => (
 					<article
-						class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50"
+						class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/50 hover:bg-white/[0.055] hover:shadow-[0_18px_45px_rgba(0,0,0,0.28)]"
 					>
 						<div
 							class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition duration-300 group-hover:via-[#d4af37]/80"
 						></div>
 
-						<div class="flex items-center justify-between gap-5">
+						<div
+							class="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#d4af37]/0 blur-3xl transition duration-500 group-hover:bg-[#d4af37]/10"
+						></div>
+
+						<div class="relative flex items-center justify-between gap-5">
 							<div>
 								<h3
-									class="text-xl font-black text-white transition group-hover:text-[#d4af37]"
+									class="text-xl font-black text-white transition duration-300 group-hover:text-[#d4af37]"
 								>
 									{partner.name}
 								</h3>
 
-								<p class="mt-2 text-sm text-neutral-500">
+								<p class="mt-2 text-sm leading-6 text-neutral-500">
 									{partner.category}
 								</p>
 							</div>
 
 							<span
-								class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 text-xl text-neutral-500 transition duration-300 group-hover:rotate-90 group-hover:border-[#d4af37]/50 group-hover:text-[#d4af37]"
+								class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.02] text-neutral-500 transition duration-300 group-hover:scale-105 group-hover:border-[#d4af37]/50 group-hover:bg-[#d4af37]/10 group-hover:text-[#d4af37]"
 								aria-hidden="true"
 							>
-								+
+								<BadgeCheck
+									size={21}
+									strokeWidth={2}
+									class="transition duration-300 group-hover:scale-110"
+								/>
 							</span>
 						</div>
 					</article>
@@ -100,22 +115,31 @@ const partners = [
 				</h3>
 
 				<p class="mt-2 leading-7 text-neutral-400">
-					We onderzoeken graag of uw bestaande producten geïntegreerd en
-					uitgebreid kunnen worden.
+					We onderzoeken graag of uw bestaande producten behouden,
+					geïntegreerd en verder uitgebreid kunnen worden.
 				</p>
 			</div>
 
 			<a
 				href="#contact"
-				class="inline-flex min-h-12 shrink-0 items-center justify-center rounded-lg border border-[#d4af37] px-6 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
+				class="group inline-flex min-h-12 shrink-0 items-center justify-center gap-3 rounded-lg border border-[#d4af37] px-6 font-bold text-white outline-none transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black focus-visible:ring-2 focus-visible:ring-[#d4af37]/70"
 			>
+				<SearchCheck
+					size={19}
+					strokeWidth={2.2}
+					aria-hidden="true"
+					class="transition duration-300 group-hover:scale-110"
+				/>
+
 				Laat uw installatie bekijken
 			</a>
 		</div>
 
 		<p class="mt-8 text-center text-xs leading-6 text-neutral-600">
 			De vermelde merknamen zijn eigendom van hun respectieve merkhouders.
-			Productkeuze is afhankelijk van de technische vereisten van ieder project.
+			Productkeuze en compatibiliteit zijn afhankelijk van de technische
+			vereisten van ieder project. Vermelding betekent niet automatisch dat
+			VeYo Smart Solutions officieel dealer of partner van ieder merk is.
 		</p>
 	</div>
 </section>

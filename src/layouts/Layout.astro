@@ -2,31 +2,52 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import WhatsAppButton from "../components/WhatsAppButton.astro";
-import CookieBanner from '../components/CookieBanner.astro';
+import CookieBanner from "../components/CookieBanner.astro";
 
 interface Props {
 	title?: string;
 	description?: string;
+	image?: string;
+	noindex?: boolean;
 }
 
 const {
-	title = "VeYo Smart Solutions | Slimmer wonen. Beter leven.",
+	title = "Smart Home, beveiliging en netwerken | VeYo Smart Solutions",
 	description =
-		"Professionele smart home-oplossingen, netwerken, beveiliging, verlichting en automatisatie in West- en Oost-Vlaanderen.",
+		"VeYo Smart Solutions installeert smart home, camerabewaking, alarmsystemen, slimme verlichting en professionele wifi in West- en Oost-Vlaanderen.",
+	image = "/og-image.png",
+	noindex = false,
 } = Astro.props;
 
 const siteUrl = "https://veyosmartsolutions.com";
-const faviconUrl = `${siteUrl}/veyo-favicon.png`;
-const socialImage = `${siteUrl}/og-image.png`;
+
+/*
+ * De huidige pagina krijgt automatisch haar eigen correcte URL.
+ * Voorbeeld:
+ * homepage  → https://veyosmartsolutions.com/
+ * privacy   → https://veyosmartsolutions.com/privacy
+ */
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
+/*
+ * De social preview blijft standaard jouw bestaande:
+ * public/og-image.png
+ */
+const socialImage = new URL(image, siteUrl).toString();
+
+const faviconUrl = new URL("/veyo-favicon.png", siteUrl).toString();
+const businessImage = new URL("/og-image.png", siteUrl).toString();
 
 const localBusinessSchema = {
 	"@context": "https://schema.org",
 	"@type": "LocalBusiness",
+	"@id": `${siteUrl}/#business`,
 	name: "VeYo Smart Solutions",
 	url: siteUrl,
 	logo: faviconUrl,
-	image: socialImage,
-	description,
+	image: businessImage,
+	description:
+		"Professionele smart home-oplossingen, beveiliging, netwerken, verlichting, audio en automatisatie in West- en Oost-Vlaanderen.",
 	telephone: "+32456536037",
 	email: "info@veyosmartsolutions.com",
 	vatID: "BE1037811809",
@@ -54,70 +75,97 @@ const localBusinessSchema = {
 ---
 
 <!doctype html>
-<html lang="nl">
+<html lang="nl-BE">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<title>{title}</title>
 
+		<!-- Algemene SEO -->
 		<meta name="description" content={description} />
 		<meta name="author" content="VeYo Smart Solutions" />
+		<meta
+			name="robots"
+			content={noindex ? "noindex, nofollow" : "index, follow"}
+		/>
 		<meta name="theme-color" content="#090909" />
 
-		<link rel="icon" type="image/png" href="/veyo-favicon.png?v=10" />
-		<link rel="apple-touch-icon" href="/veyo-favicon.png?v=10" />
+		<!-- Hoofd-URL van deze pagina -->
+		<link rel="canonical" href={canonicalUrl} />
 
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			href="/veyo-favicon.png?v=10"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="/veyo-favicon.png?v=10"
+		/>
+
+		<!-- Open Graph: WhatsApp, Facebook, Messenger, LinkedIn en iMessage -->
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="nl_BE" />
 		<meta property="og:site_name" content="VeYo Smart Solutions" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:url" content={siteUrl} />
+		<meta property="og:url" content={canonicalUrl} />
+
 		<meta property="og:image" content={socialImage} />
+		<meta property="og:image:secure_url" content={socialImage} />
 		<meta property="og:image:type" content="image/png" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta
 			property="og:image:alt"
-			content="VeYo Smart Solutions logo"
+			content="VeYo Smart Solutions – Slimmer wonen. Beter leven."
 		/>
 
+		<!-- X / Twitter -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={socialImage} />
+		<meta
+			name="twitter:image:alt"
+			content="VeYo Smart Solutions – Slimmer wonen. Beter leven."
+		/>
 
+		<!-- Bedrijfsgegevens voor zoekmachines -->
 		<script
 			type="application/ld+json"
 			set:html={JSON.stringify(localBusinessSchema)}
 		/>
 
 		<!-- Google Analytics: standaard geen toestemming -->
-<script is:inline>
-  window.dataLayer = window.dataLayer || [];
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
 
-  function gtag() {
-    dataLayer.push(arguments);
-  }
+			function gtag() {
+				window.dataLayer.push(arguments);
+			}
 
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
-  });
+			window.gtag = gtag;
 
-  gtag('js', new Date());
-  gtag('config', 'G-F18859SKSZ');
-</script>
+			gtag("consent", "default", {
+				analytics_storage: "denied",
+				ad_storage: "denied",
+				ad_user_data: "denied",
+				ad_personalization: "denied",
+				wait_for_update: 500,
+			});
 
-<script
-  is:inline
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-F18859SKSZ"
-></script>
+			gtag("js", new Date());
+			gtag("config", "G-F18859SKSZ");
+		</script>
+
+		<script
+			is:inline
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-F18859SKSZ"
+		></script>
 	</head>
 
 	<body>

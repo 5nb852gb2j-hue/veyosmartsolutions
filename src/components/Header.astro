@@ -1,4 +1,9 @@
 ---
+import {
+	FileText,
+	MessageCircle,
+} from "lucide-astro";
+
 const navigation = [
 	{ label: "Diensten", href: "/#diensten" },
 	{ label: "Projecten", href: "/#projecten" },
@@ -10,7 +15,7 @@ const navigation = [
 ---
 
 <header
-	class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#080808]/85 backdrop-blur-xl"
+	class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#080808]/85 shadow-[0_12px_35px_rgba(0,0,0,0.22)] backdrop-blur-xl"
 >
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="flex h-20 items-center justify-between gap-6">
@@ -18,11 +23,11 @@ const navigation = [
 			<!-- Logo -->
 			<a
 				href="/"
-				class="group inline-flex shrink-0 items-center gap-2"
+				class="group inline-flex shrink-0 items-center gap-2 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/70"
 				aria-label="VeYo Smart Solutions homepage"
 			>
 				<span
-					class="text-2xl font-black tracking-[-0.04em] text-[#d4af37] transition group-hover:text-white"
+					class="text-2xl font-black tracking-[-0.04em] text-[#d4af37] transition duration-300 group-hover:text-white"
 				>
 					VeYo
 				</span>
@@ -43,12 +48,13 @@ const navigation = [
 					navigation.map((item) => (
 						<a
 							href={item.href}
-							class="group relative py-7 text-sm font-bold text-neutral-300 transition hover:text-white"
+							class="group relative rounded-md py-7 text-sm font-bold text-neutral-300 outline-none transition duration-300 hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 						>
 							{item.label}
 
 							<span
 								class="absolute inset-x-0 bottom-5 h-px origin-left scale-x-0 bg-[#d4af37] transition duration-300 group-hover:scale-x-100"
+								aria-hidden="true"
 							></span>
 						</a>
 					))
@@ -58,18 +64,25 @@ const navigation = [
 			<!-- Desktop CTA -->
 			<a
 				href="/#contact"
-				class="hidden min-h-12 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-6 text-sm font-black text-black transition duration-300 hover:-translate-y-0.5 hover:bg-white lg:inline-flex"
+				class="group hidden min-h-12 shrink-0 items-center justify-center gap-2.5 rounded-lg bg-[#d4af37] px-6 text-sm font-black text-black outline-none transition duration-300 hover:-translate-y-0.5 hover:bg-white focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#080808] lg:inline-flex"
 			>
+				<FileText
+					size={18}
+					strokeWidth={2.2}
+					aria-hidden="true"
+					class="transition duration-300 group-hover:-rotate-3 group-hover:scale-105"
+				/>
+
 				Offerte aanvragen
 			</a>
 
 			<!-- Mobiel menu -->
 			<details class="group relative lg:hidden">
 				<summary
-					class="flex h-12 w-12 cursor-pointer list-none items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white transition hover:border-[#d4af37]/50 hover:text-[#d4af37]"
+					class="flex h-12 w-12 cursor-pointer list-none items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-white outline-none transition duration-300 hover:border-[#d4af37]/50 hover:bg-white/[0.06] hover:text-[#d4af37] focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 					aria-label="Open navigatiemenu"
 				>
-					<span class="relative block h-5 w-6">
+					<span class="relative block h-5 w-6" aria-hidden="true">
 						<span
 							class="absolute left-0 top-0 h-0.5 w-6 bg-current transition duration-300 group-open:top-[9px] group-open:rotate-45"
 						></span>
@@ -92,7 +105,7 @@ const navigation = [
 							navigation.map((item) => (
 								<a
 									href={item.href}
-									class="rounded-xl px-4 py-3.5 font-bold text-neutral-300 transition hover:bg-white/[0.05] hover:text-[#d4af37]"
+									class="rounded-xl px-4 py-3.5 font-bold text-neutral-300 outline-none transition duration-300 hover:bg-white/[0.05] hover:text-[#d4af37] focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 								>
 									{item.label}
 								</a>
@@ -101,17 +114,30 @@ const navigation = [
 
 						<a
 							href="/#contact"
-							class="mt-3 inline-flex min-h-12 items-center justify-center rounded-lg bg-[#d4af37] px-5 font-black text-black transition hover:bg-white"
+							class="group mt-3 inline-flex min-h-12 items-center justify-center gap-2.5 rounded-lg bg-[#d4af37] px-5 font-black text-black outline-none transition duration-300 hover:bg-white focus-visible:ring-2 focus-visible:ring-white"
 						>
+							<FileText
+								size={18}
+								strokeWidth={2.2}
+								aria-hidden="true"
+							/>
+
 							Offerte aanvragen
 						</a>
 
 						<a
 							href="https://wa.me/32456536037?text=Hallo%20Yordi%2C%20ik%20heb%20interesse%20in%20een%20slimme%20oplossing%20van%20VeYo%20Smart%20Solutions."
 							target="_blank"
-							rel="noreferrer"
-							class="mt-3 inline-flex min-h-12 items-center justify-center rounded-lg border border-[#25D366]/40 px-5 font-bold text-[#25D366] transition hover:bg-[#25D366] hover:text-black"
+							rel="noopener noreferrer"
+							class="group mt-3 inline-flex min-h-12 items-center justify-center gap-2.5 rounded-lg border border-[#25D366]/40 px-5 font-bold text-[#25D366] outline-none transition duration-300 hover:border-[#25D366] hover:bg-[#25D366] hover:text-black focus-visible:ring-2 focus-visible:ring-[#25D366]/70"
 						>
+							<MessageCircle
+								size={19}
+								strokeWidth={2.2}
+								aria-hidden="true"
+								class="transition duration-300 group-hover:scale-110"
+							/>
+
 							WhatsApp
 						</a>
 					</nav>

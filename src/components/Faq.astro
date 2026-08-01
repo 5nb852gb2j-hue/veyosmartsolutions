@@ -1,4 +1,9 @@
 ---
+import {
+	ChevronDown,
+	MessageCircleQuestion,
+} from "lucide-astro";
+
 const faqs = [
 	{
 		question: "Installeren jullie ook toestellen die ik zelf heb aangekocht?",
@@ -46,11 +51,25 @@ const faqs = [
 			"Ja. We houden bij het advies en de installatie zoveel mogelijk rekening met toekomstige uitbreidingen, zodat later extra verlichting, camera’s, access points, sensoren of automatisaties kunnen worden toegevoegd.",
 	},
 ];
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: faqs.map((faq) => ({
+		"@type": "Question",
+		name: faq.question,
+		acceptedAnswer: {
+			"@type": "Answer",
+			text: faq.answer,
+		},
+	})),
+};
 ---
 
 <section
 	id="faq"
 	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+	aria-labelledby="faq-titel"
 >
 	<div
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
@@ -62,6 +81,8 @@ const faqs = [
 
 	<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+
+			<!-- Inleiding -->
 			<div class="lg:sticky lg:top-28 lg:self-start">
 				<p
 					class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
@@ -70,6 +91,7 @@ const faqs = [
 				</p>
 
 				<h2
+					id="faq-titel"
 					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
 				>
 					Duidelijke antwoorden.
@@ -84,43 +106,58 @@ const faqs = [
 
 				<a
 					href="#contact"
-					class="mt-9 inline-flex min-h-14 items-center justify-center rounded-lg border border-[#d4af37] px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
+					class="group mt-9 inline-flex min-h-14 items-center justify-center gap-3 rounded-lg border border-[#d4af37] px-7 font-bold text-white outline-none transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black focus-visible:ring-2 focus-visible:ring-[#d4af37]/70"
 				>
+					<MessageCircleQuestion
+						size={20}
+						strokeWidth={2.2}
+						aria-hidden="true"
+						class="transition duration-300 group-hover:scale-110"
+					/>
+
 					Stel uw eigen vraag
 				</a>
 			</div>
 
+			<!-- Vragen -->
 			<div class="space-y-4">
 				{
 					faqs.map((faq, index) => (
 						<details
-							class="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 open:border-[#d4af37]/40 open:bg-[#d4af37]/[0.04]"
+							class="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition duration-300 hover:border-white/20 open:border-[#d4af37]/40 open:bg-[#d4af37]/[0.04]"
 						>
 							<summary
-								class="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-6 text-left sm:px-7"
+								class="flex cursor-pointer list-none items-center justify-between gap-5 px-5 py-5 outline-none transition sm:gap-6 sm:px-7 sm:py-6 focus-visible:bg-white/[0.04]"
 							>
-								<div class="flex items-start gap-5">
+								<div class="flex min-w-0 items-start gap-4 sm:gap-5">
 									<span
-										class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-sm font-black text-[#d4af37]"
+										class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-sm font-black text-[#d4af37] transition duration-300 group-open:border-[#d4af37]/55 group-open:bg-[#d4af37]/15"
 										aria-hidden="true"
 									>
 										{String(index + 1).padStart(2, "0")}
 									</span>
 
-									<h3 class="text-lg font-black leading-7 text-white sm:text-xl">
+									<h3
+										class="text-lg font-black leading-7 text-white sm:text-xl"
+									>
 										{faq.question}
 									</h3>
 								</div>
 
 								<span
-									class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 text-xl text-neutral-400 transition duration-300 group-open:rotate-45 group-open:border-[#d4af37]/50 group-open:text-[#d4af37]"
+									class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 text-neutral-400 transition duration-300 group-hover:border-[#d4af37]/30 group-hover:text-[#d4af37] group-open:rotate-180 group-open:border-[#d4af37]/50 group-open:bg-[#d4af37]/10 group-open:text-[#d4af37]"
 									aria-hidden="true"
 								>
-									+
+									<ChevronDown
+										size={21}
+										strokeWidth={2.2}
+									/>
 								</span>
 							</summary>
 
-							<div class="px-6 pb-7 pl-20 sm:px-7 sm:pl-[5.75rem]">
+							<div
+								class="px-5 pb-7 pl-[4.25rem] sm:px-7 sm:pl-[5.75rem]"
+							>
 								<p class="max-w-3xl leading-8 text-neutral-400">
 									{faq.answer}
 								</p>
@@ -132,3 +169,8 @@ const faqs = [
 		</div>
 	</div>
 </section>
+
+<script
+	type="application/ld+json"
+	set:html={JSON.stringify(faqSchema)}
+/>

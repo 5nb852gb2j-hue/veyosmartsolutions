@@ -1,15 +1,35 @@
 ---
+import {
+	Handshake,
+	Wrench,
+	Building2,
+	MapPin,
+} from "lucide-astro";
+
 const highlights = [
-	"Persoonlijk advies en rechtstreeks contact",
-	"Installatie, configuratie en duidelijke uitleg",
-	"Oplossingen voor woningen en kleine bedrijven",
-	"Actief in West- en Oost-Vlaanderen",
+	{
+		icon: Handshake,
+		text: "Persoonlijk advies en rechtstreeks contact",
+	},
+	{
+		icon: Wrench,
+		text: "Installatie, configuratie en duidelijke uitleg",
+	},
+	{
+		icon: Building2,
+		text: "Oplossingen voor woningen en kleine bedrijven",
+	},
+	{
+		icon: MapPin,
+		text: "Actief in West- en Oost-Vlaanderen",
+	},
 ];
 ---
 
 <section
 	id="over-veyo"
 	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+	aria-labelledby="over-veyo-titel"
 >
 	<div
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
@@ -30,6 +50,8 @@ const highlights = [
 					<img
 						src="/images/profile/yordi.png"
 						alt="Yordi Verheecke, oprichter van VeYo Smart Solutions"
+						loading="lazy"
+						decoding="async"
 						class="absolute inset-0 h-full w-full object-cover"
 					/>
 
@@ -37,9 +59,7 @@ const highlights = [
 						class="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent"
 					></div>
 
-					<div
-						class="absolute inset-x-0 bottom-0 p-8 pt-32"
-					>
+					<div class="absolute inset-x-0 bottom-0 p-8 pt-32">
 						<p
 							class="text-sm font-bold uppercase tracking-[0.22em] text-[#d4af37]"
 						>
@@ -72,6 +92,7 @@ const highlights = [
 				</p>
 
 				<h2
+					id="over-veyo-titel"
 					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
 				>
 					Persoonlijke service met een passie voor
@@ -81,8 +102,8 @@ const highlights = [
 				<p class="mt-7 text-lg leading-8 text-neutral-400">
 					VeYo Smart Solutions helpt particulieren en kleine bedrijven om
 					technologie slimmer, veiliger en gebruiksvriendelijker in te zetten.
-					Van een betere WiFi-verbinding tot een volledig geïntegreerde smart
-					home-installatie.
+					Van een betere WiFi-verbinding tot een volledig geïntegreerde
+					smart-home-installatie.
 				</p>
 
 				<p class="mt-5 text-lg leading-8 text-neutral-400">
@@ -93,17 +114,23 @@ const highlights = [
 
 				<ul class="mt-8 grid gap-4 sm:grid-cols-2">
 					{
-						highlights.map((highlight) => (
-							<li class="flex items-start gap-3">
+						highlights.map(({ icon: Icon, text }) => (
+							<li
+								class="group flex items-start gap-4 rounded-xl border border-white/10 bg-white/[0.025] p-4 transition duration-300 hover:-translate-y-0.5 hover:border-[#d4af37]/40 hover:bg-white/[0.045]"
+							>
 								<span
-									class="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/40 bg-[#d4af37]/10 text-sm font-bold text-[#d4af37]"
+									class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37] transition duration-300 group-hover:scale-105 group-hover:border-[#d4af37]/55"
 									aria-hidden="true"
 								>
-									✓
+									<Icon
+										size={22}
+										strokeWidth={2}
+										class="transition duration-300 group-hover:scale-110"
+									/>
 								</span>
 
-								<span class="leading-7 text-neutral-300">
-									{highlight}
+								<span class="pt-1 leading-7 text-neutral-300">
+									{text}
 								</span>
 							</li>
 						))

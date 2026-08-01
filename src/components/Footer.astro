@@ -1,4 +1,18 @@
 ---
+import {
+	ArrowRight,
+	BadgeCheck,
+	ExternalLink,
+	FileText,
+	Handshake,
+	Mail,
+	MapPin,
+	MessageSquareText,
+	Phone,
+	ReceiptText,
+	Wrench,
+} from "lucide-astro";
+
 const currentYear = new Date().getFullYear();
 
 const quickLinks = [
@@ -21,10 +35,22 @@ const services = [
 ];
 
 const strengths = [
-	"Persoonlijk advies",
-	"Installatie op maat",
-	"Betrouwbare merken",
-	"Duidelijke uitleg & nazorg",
+	{
+		icon: Handshake,
+		text: "Persoonlijk advies",
+	},
+	{
+		icon: Wrench,
+		text: "Installatie op maat",
+	},
+	{
+		icon: BadgeCheck,
+		text: "Betrouwbare merken",
+	},
+	{
+		icon: MessageSquareText,
+		text: "Duidelijke uitleg & nazorg",
+	},
 ];
 
 const socialLinks = [
@@ -91,21 +117,28 @@ const socialLinks = [
 
 				<a
 					href="/#contact"
-					class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg bg-[#d4af37] px-8 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+					class="group/cta inline-flex min-h-14 shrink-0 items-center justify-center gap-3 rounded-lg bg-[#d4af37] px-8 font-black text-black outline-none transition duration-300 hover:-translate-y-1 hover:bg-white focus-visible:ring-2 focus-visible:ring-white"
 				>
+					<FileText
+						size={20}
+						strokeWidth={2.2}
+						aria-hidden="true"
+						class="transition duration-300 group-hover/cta:-rotate-3 group-hover/cta:scale-105"
+					/>
+
 					Vraag vrijblijvend een offerte aan
 				</a>
 			</div>
 		</div>
 
 		<!-- Hoofdfooter -->
-		<div class="mt-16 grid gap-14 md:grid-cols-2 lg:grid-cols-5">
+		<div class="mt-16 grid gap-14 md:grid-cols-2 lg:grid-cols-6">
 
 			<!-- Branding -->
 			<div class="md:col-span-2 lg:col-span-2">
 				<a
 					href="/"
-					class="inline-flex items-center gap-2 text-2xl font-black"
+					class="inline-flex items-center gap-2 rounded-lg text-2xl font-black outline-none focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 					aria-label="VeYo Smart Solutions homepage"
 				>
 					<span class="text-[#d4af37]">VeYo</span>
@@ -122,26 +155,30 @@ const socialLinks = [
 					Van advies en bekabeling tot installatie, configuratie en nazorg.
 				</p>
 
-				<div class="mt-7 grid gap-3 sm:grid-cols-2">
+				<ul class="mt-7 grid gap-3 sm:grid-cols-2">
 					{
-						strengths.map((strength) => (
-							<div
-								class="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3"
+						strengths.map(({ icon: Icon, text }) => (
+							<li
+								class="group flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 transition duration-300 hover:-translate-y-0.5 hover:border-[#d4af37]/35 hover:bg-white/[0.045]"
 							>
 								<span
-									class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/35 bg-[#d4af37]/10 text-xs font-black text-[#d4af37]"
+									class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/35 bg-[#d4af37]/10 text-[#d4af37] transition duration-300 group-hover:scale-105 group-hover:border-[#d4af37]/55"
 									aria-hidden="true"
 								>
-									✓
+									<Icon
+										size={18}
+										strokeWidth={2}
+										class="transition duration-300 group-hover:scale-110"
+									/>
 								</span>
 
-								<span class="text-sm text-neutral-300">
-									{strength}
+								<span class="text-sm leading-5 text-neutral-300">
+									{text}
 								</span>
-							</div>
+							</li>
 						))
 					}
-				</div>
+				</ul>
 			</div>
 
 			<!-- Snelle links -->
@@ -158,16 +195,16 @@ const socialLinks = [
 							<li>
 								<a
 									href={link.href}
-									class="group inline-flex items-center gap-2 text-neutral-400 transition hover:text-white"
+									class="group inline-flex items-center gap-2 rounded-md text-neutral-400 outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 								>
 									<span>{link.label}</span>
 
-									<span
-										class="translate-x-0 text-[#d4af37] opacity-0 transition duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+									<ArrowRight
+										size={15}
+										strokeWidth={2}
 										aria-hidden="true"
-									>
-										→
-									</span>
+										class="translate-x-0 text-[#d4af37] opacity-0 transition duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+									/>
 								</a>
 							</li>
 						))
@@ -189,7 +226,7 @@ const socialLinks = [
 							<li>
 								<a
 									href="/#diensten"
-									class="text-neutral-400 transition hover:text-white"
+									class="rounded-md text-neutral-400 outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 								>
 									{service}
 								</a>
@@ -200,66 +237,100 @@ const socialLinks = [
 			</div>
 
 			<!-- Contact -->
-			<div class="lg:min-w-[250px]">
+			<div class="md:col-span-2 lg:col-span-2">
 				<h2
 					class="text-sm font-bold uppercase tracking-[0.2em] text-[#d4af37]"
 				>
 					Contact
 				</h2>
 
-				<div class="mt-6 space-y-4 text-neutral-400">
-					<p>
-						<a
-							href="tel:+32456536037"
-							class="whitespace-nowrap transition hover:text-white"
+				<div class="mt-6 space-y-3">
+					<a
+						href="tel:+32456536037"
+						class="group flex items-center gap-3 rounded-xl p-2 text-neutral-400 outline-none transition hover:bg-white/[0.04] hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+					>
+						<span
+							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+							aria-hidden="true"
 						>
+							<Phone size={18} strokeWidth={2} />
+						</span>
+
+						<span class="whitespace-nowrap">
 							+32 456 53 60 37
-						</a>
-					</p>
+						</span>
+					</a>
 
-					<p>
-						<a
-							href="mailto:info@veyosmartsolutions.com"
-							class="whitespace-nowrap text-sm transition hover:text-white xl:text-base"
+					<a
+						href="mailto:info@veyosmartsolutions.com"
+						class="group flex items-center gap-3 rounded-xl p-2 text-neutral-400 outline-none transition hover:bg-white/[0.04] hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+					>
+						<span
+							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+							aria-hidden="true"
 						>
-							info@veyosmartsolutions.com
-						</a>
-					</p>
+							<Mail size={18} strokeWidth={2} />
+						</span>
 
-					<div class="leading-7">
-						<p>Actief op locatie</p>
-						<p>West- & Oost-Vlaanderen</p>
+						<span class="whitespace-nowrap text-[13px] sm:text-sm xl:text-base">
+							info@veyosmartsolutions.com
+						</span>
+					</a>
+
+					<div class="flex items-start gap-3 rounded-xl p-2 text-neutral-400">
+						<span
+							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+							aria-hidden="true"
+						>
+							<MapPin size={18} strokeWidth={2} />
+						</span>
+
+						<div class="leading-6">
+							<p>Actief op locatie</p>
+							<p>West- & Oost-Vlaanderen</p>
+						</div>
 					</div>
 
-					<div class="leading-7">
-						<p>BTW-nummer</p>
-						<p>BE1037811809</p>
+					<div class="flex items-start gap-3 rounded-xl p-2 text-neutral-400">
+						<span
+							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+							aria-hidden="true"
+						>
+							<ReceiptText size={18} strokeWidth={2} />
+						</span>
+
+						<div class="leading-6">
+							<p>BTW-nummer</p>
+							<p>BE1037811809</p>
+						</div>
 					</div>
 				</div>
 
-				<div class="mt-7 flex flex-col gap-3">
+				<!-- Sociale media -->
+				<div class="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
 					{
 						socialLinks.map((social) => (
 							<a
 								href={social.href}
 								target="_blank"
-								rel="noreferrer"
-								class="group inline-flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-neutral-300 transition hover:-translate-y-0.5 hover:border-[#d4af37]/50 hover:text-[#d4af37]"
+								rel="noopener noreferrer"
+								aria-label={`${social.name} van VeYo Smart Solutions openen`}
+								class="group inline-flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-neutral-300 outline-none transition duration-300 hover:-translate-y-0.5 hover:border-[#d4af37]/50 hover:bg-white/[0.05] hover:text-[#d4af37] focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 							>
 								<span>{social.name}</span>
 
-								<span
-									class="transition group-hover:translate-x-1"
+								<ExternalLink
+									size={17}
+									strokeWidth={2}
 									aria-hidden="true"
-								>
-									→
-								</span>
+									class="transition duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+								/>
 							</a>
 						))
 					}
 				</div>
 			</div>
-			</div>
+		</div>
 
 		<!-- Onderste lijn -->
 		<div
@@ -276,15 +347,24 @@ const socialLinks = [
 			</div>
 
 			<div class="flex flex-wrap gap-x-6 gap-y-2">
-				<a href="/privacy" class="transition hover:text-white">
+				<a
+					href="/privacy"
+					class="rounded-md outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+				>
 					Privacybeleid
 				</a>
 
-				<a href="/cookiebeleid" class="transition hover:text-white">
+				<a
+					href="/cookiebeleid"
+					class="rounded-md outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+				>
 					Cookiebeleid
 				</a>
 
-				<a href="/algemene-voorwaarden" class="transition hover:text-white">
+				<a
+					href="/algemene-voorwaarden"
+					class="rounded-md outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+				>
 					Algemene voorwaarden
 				</a>
 			</div>

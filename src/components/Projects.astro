@@ -1,4 +1,10 @@
 ---
+import {
+	ArrowRight,
+	MapPin,
+	MessageSquareText,
+} from "lucide-astro";
+
 const projects = [
 	{
 		title: "Slimme verlichting binnen en buiten",
@@ -11,7 +17,7 @@ const projects = [
 	{
 		title: "Slimme videodeurbellen",
 		category: "Camera’s & beveiliging",
-		location: "West-Vlaanderen",
+		location: "West- & Oost-Vlaanderen",
 		href: "/projects/smart-doorbell",
 		image: "/images/projects/smart-doorbell/ring-1.jpeg",
 	},
@@ -25,7 +31,7 @@ const projects = [
 	{
 		title: "Buiten-WiFi",
 		category: "WiFi & netwerken",
-		location: "West-Vlaanderen",
+		location: "Oost-Vlaanderen",
 		href: "/projects/outdoor-wifi",
 		image: "/images/projects/outdoor-wifi/hero.jpeg",
 	},
@@ -46,7 +52,7 @@ const projects = [
 	{
 		title: "Slimme carportverlichting",
 		category: "Verlichting & automatisatie",
-		location: "West-Vlaanderen",
+		location: "Oost-Vlaanderen",
 		href: "/projects/carport-lighting",
 		image: "/images/projects/carport-lighting/hero.jpeg",
 	},
@@ -56,6 +62,7 @@ const projects = [
 <section
 	id="projecten"
 	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+	aria-labelledby="projecten-titel"
 >
 	<div
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
@@ -77,6 +84,7 @@ const projects = [
 				</p>
 
 				<h2
+					id="projecten-titel"
 					class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
 				>
 					Slimme oplossingen.
@@ -91,8 +99,15 @@ const projects = [
 
 			<a
 				href="#contact"
-				class="inline-flex min-h-14 shrink-0 items-center justify-center rounded-lg border border-[#d4af37] px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black"
+				class="group inline-flex min-h-14 shrink-0 items-center justify-center gap-3 rounded-lg border border-[#d4af37] px-7 font-bold text-white outline-none transition duration-300 hover:-translate-y-1 hover:bg-[#d4af37] hover:text-black focus-visible:ring-2 focus-visible:ring-[#d4af37]/70"
 			>
+				<MessageSquareText
+					size={20}
+					strokeWidth={2.2}
+					aria-hidden="true"
+					class="transition duration-300 group-hover:scale-110"
+				/>
+
 				Bespreek uw project
 			</a>
 		</div>
@@ -102,8 +117,9 @@ const projects = [
 				projects.map((project) => (
 					<a
 						href={project.href}
+						aria-label={`Bekijk project: ${project.title}`}
 						class:list={[
-							"group relative block min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111] transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/45",
+							"group relative block min-h-[430px] overflow-hidden rounded-2xl border border-white/10 bg-[#111111] outline-none transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/45 focus-visible:ring-2 focus-visible:ring-[#d4af37]/70",
 							project.featured ? "lg:col-span-2 lg:min-h-[560px]" : "",
 						]}
 					>
@@ -111,6 +127,7 @@ const projects = [
 							src={project.image}
 							alt={project.title}
 							loading="lazy"
+							decoding="async"
 							class="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-110"
 						/>
 
@@ -127,7 +144,7 @@ const projects = [
 						</div>
 
 						<div
-							class="absolute inset-x-0 bottom-0 z-10 p-7 transition-all duration-500 group-hover:translate-y-[-6px] sm:p-8"
+							class="absolute inset-x-0 bottom-0 z-10 p-7 transition-all duration-500 group-hover:-translate-y-1.5 sm:p-8"
 						>
 							<p
 								class="text-sm font-bold uppercase tracking-[0.18em] text-[#d4af37]"
@@ -146,24 +163,42 @@ const projects = [
 								{project.title}
 							</h3>
 
-							<div class="mt-6 flex items-center justify-between gap-4">
+							<div class="mt-6 flex items-end justify-between gap-4">
 								<div>
-									<p class="text-neutral-400">
-										{project.location}
+									<p
+										class="flex items-center gap-2 text-neutral-400"
+									>
+										<MapPin
+											size={17}
+											strokeWidth={2}
+											aria-hidden="true"
+											class="shrink-0 text-[#d4af37]"
+										/>
+
+										<span>{project.location}</span>
 									</p>
 
 									<p
-										class="mt-3 translate-y-2 text-sm font-bold text-[#d4af37] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
+										class="mt-3 flex translate-y-2 items-center gap-2 text-sm font-bold text-[#d4af37] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100"
 									>
-										Bekijk project →
+										Bekijk project
+
+										<ArrowRight
+											size={16}
+											strokeWidth={2.2}
+											aria-hidden="true"
+										/>
 									</p>
 								</div>
 
 								<span
-									class="flex h-12 w-12 items-center justify-center rounded-full border border-[#d4af37]/50 text-xl text-[#d4af37] transition-all duration-500 group-hover:translate-x-2 group-hover:scale-110 group-hover:bg-[#d4af37] group-hover:text-black"
+									class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#d4af37]/50 text-[#d4af37] transition-all duration-500 group-hover:translate-x-1 group-hover:scale-110 group-hover:bg-[#d4af37] group-hover:text-black group-focus-visible:bg-[#d4af37] group-focus-visible:text-black"
 									aria-hidden="true"
 								>
-									→
+									<ArrowRight
+										size={21}
+										strokeWidth={2.2}
+									/>
 								</span>
 							</div>
 						</div>

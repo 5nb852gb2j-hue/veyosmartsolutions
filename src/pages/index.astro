@@ -9,9 +9,15 @@ import Partners from "../components/Partners.astro";
 import Faq from "../components/Faq.astro";
 import AboutVeyo from "../components/AboutVeyo.astro";
 import ContactSection from "../components/ContactSection.astro";
+
+const title =
+	"Smart Home, beveiliging en netwerken | VeYo Smart Solutions";
+
+const description =
+	"VeYo Smart Solutions installeert smart home, camerabewaking, alarmsystemen, professionele wifi, netwerken, slimme verlichting en audio in West- en Oost-Vlaanderen.";
 ---
 
-<Layout>
+<Layout title={title} description={description}>
 	<Header />
 
 	<main>
