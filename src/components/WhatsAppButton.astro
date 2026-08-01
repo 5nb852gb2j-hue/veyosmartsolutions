@@ -1,5 +1,6 @@
 ---
 const phoneNumber = "32456536037";
+
 const message =
 	"Hallo Yordi, ik heb interesse in een slimme oplossing van VeYo Smart Solutions en had graag wat meer informatie.";
 
@@ -9,26 +10,23 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mess
 <a
 	href={whatsappUrl}
 	target="_blank"
-	rel="noreferrer"
+	rel="noopener noreferrer"
 	aria-label="Neem contact op via WhatsApp"
-	class="group fixed bottom-8 right-8 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl shadow-black/40 transition duration-300 hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#25D366]/30"
+	class="group fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_38px_rgba(37,211,102,0.35)] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_18px_50px_rgba(37,211,102,0.5)] focus:outline-none focus:ring-4 focus:ring-[#25D366]/30 sm:bottom-8 sm:right-8"
 >
 	<svg
-		viewBox="0 0 32 32"
+		viewBox="0 0 24 24"
 		aria-hidden="true"
-		class="h-8 w-8 fill-current"
+		class="block h-10 w-10 fill-current"
 	>
 		<path
-			d="M19.11 17.39c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.75.95-.92 1.14-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.19.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.16-.24-.57-.48-.49-.66-.5h-.56c-.19 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.43 0 1.44 1.05 2.82 1.19 3.02.15.19 2.06 3.14 4.99 4.4.7.3 1.24.48 1.67.62.7.22 1.33.19 1.83.12.56-.08 1.72-.7 1.96-1.37.24-.68.24-1.26.17-1.38-.07-.12-.27-.19-.56-.34Z"
-		/>
-		<path
-			d="M16.03 3.2c-6.99 0-12.67 5.56-12.67 12.4 0 2.19.58 4.33 1.69 6.21L3.25 28.8l7.3-1.87a12.82 12.82 0 0 0 5.47 1.22h.01c6.98 0 12.66-5.56 12.66-12.4 0-3.31-1.3-6.42-3.67-8.76A12.78 12.78 0 0 0 16.03 3.2Zm0 22.85h-.01a10.68 10.68 0 0 1-5.07-1.29l-.36-.19-4.33 1.11 1.15-4.13-.21-.37a10.2 10.2 0 0 1-1.59-5.48c0-5.69 4.72-10.32 10.52-10.32 2.81 0 5.45 1.07 7.43 3.03a10.13 10.13 0 0 1 3.08 7.27c0 5.69-4.72 10.37-10.61 10.37Z"
+			d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.149-.173.198-.297.297-.495.1-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.372-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.438-9.887 9.891-9.887 2.641.001 5.124 1.03 6.99 2.898a9.825 9.825 0 0 1 2.895 6.993c-.003 5.45-4.439 9.889-9.892 9.889m8.413-18.297A11.815 11.815 0 0 0 12.055 0C5.495 0 .16 5.335.157 11.892a11.86 11.86 0 0 0 1.589 5.946L.057 24l6.305-1.654a11.9 11.9 0 0 0 5.688 1.448h.005c6.558 0 11.894-5.336 11.897-11.893a11.82 11.82 0 0 0-3.488-8.413"
 		/>
 	</svg>
 
 	<span
-		class="pointer-events-none absolute right-20 hidden whitespace-nowrap rounded-lg border border-white/10 bg-[#111111] px-4 py-2 text-sm font-bold text-white shadow-xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block sm:translate-x-2"
+		class="pointer-events-none absolute right-20 hidden translate-x-2 whitespace-nowrap rounded-lg border border-white/10 bg-[#111111] px-4 py-2 text-sm font-bold text-white opacity-0 shadow-xl transition duration-300 group-hover:translate-x-0 group-hover:opacity-100 sm:block"
 	>
-		Stuur ons een WhatsApp
+		Stel uw vraag via WhatsApp
 	</span>
 </a>
