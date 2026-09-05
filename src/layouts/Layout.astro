@@ -12,9 +12,9 @@ interface Props {
 }
 
 const {
-	title = "Smart Home, beveiliging en netwerken | VeYo Smart Solutions",
+	title = "Smart Home, WiFi & slimme technologie | VeYo Smart Solutions",
 	description =
-		"VeYo Smart Solutions installeert smart home, camerabewaking, alarmsystemen, slimme verlichting en professionele wifi in West- en Oost-Vlaanderen.",
+		"VeYo Smart Solutions helpt particulieren en kleine bedrijven met smart home, professionele WiFi, netwerken, slimme verlichting, automatisatie en andere slimme oplossingen in West- en Oost-Vlaanderen.",
 	image = "/og-image.png",
 	noindex = false,
 } = Astro.props;
@@ -22,54 +22,118 @@ const {
 const siteUrl = "https://veyosmartsolutions.com";
 
 /*
- * De huidige pagina krijgt automatisch haar eigen correcte URL.
- * Voorbeeld:
- * homepage  → https://veyosmartsolutions.com/
- * privacy   → https://veyosmartsolutions.com/privacy
+ * Canonical URL van de huidige pagina.
  */
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
 
 /*
- * De social preview blijft standaard jouw bestaande:
- * public/og-image.png
+ * Afbeeldingen
  */
 const socialImage = new URL(image, siteUrl).toString();
-
-const faviconUrl = new URL("/veyo-favicon.png", siteUrl).toString();
 const businessImage = new URL("/og-image.png", siteUrl).toString();
+const faviconUrl = new URL("/veyo-favicon.png", siteUrl).toString();
 
-const localBusinessSchema = {
+/*
+ * Structured data
+ */
+const structuredData = {
 	"@context": "https://schema.org",
-	"@type": "LocalBusiness",
-	"@id": `${siteUrl}/#business`,
-	name: "VeYo Smart Solutions",
-	url: siteUrl,
-	logo: faviconUrl,
-	image: businessImage,
-	description:
-		"Professionele smart home-oplossingen, beveiliging, netwerken, verlichting, audio en automatisatie in West- en Oost-Vlaanderen.",
-	telephone: "+32456536037",
-	email: "info@veyosmartsolutions.com",
-	vatID: "BE1037811809",
-	address: {
-		"@type": "PostalAddress",
-		addressLocality: "Jabbeke",
-		addressRegion: "West-Vlaanderen",
-		addressCountry: "BE",
-	},
-	areaServed: [
+	"@graph": [
 		{
-			"@type": "AdministrativeArea",
-			name: "West-Vlaanderen",
+			"@type": "WebSite",
+			"@id": `${siteUrl}/#website`,
+			url: `${siteUrl}/`,
+			name: "VeYo Smart Solutions",
+			description:
+				"Smart home, professionele WiFi, netwerken, slimme verlichting en automatisatie in West- en Oost-Vlaanderen.",
+			publisher: {
+				"@id": `${siteUrl}/#business`,
+			},
+			inLanguage: "nl-BE",
 		},
+
 		{
-			"@type": "AdministrativeArea",
-			name: "Oost-Vlaanderen",
+			"@type": "LocalBusiness",
+			"@id": `${siteUrl}/#business`,
+			name: "VeYo Smart Solutions",
+			url: `${siteUrl}/`,
+			image: businessImage,
+			logo: faviconUrl,
+
+			description:
+				"VeYo Smart Solutions is een installateur van smart home-oplossingen, professionele WiFi, netwerken, slimme verlichting, automatisatie en slimme technologie voor woningen en kleine bedrijven in West- en Oost-Vlaanderen.",
+
+			telephone: "+32456536037",
+			email: "info@veyosmartsolutions.com",
+			vatID: "BE1037811809",
+
+			founder: {
+				"@type": "Person",
+				name: "Yordi Verheecke",
+			},
+
+			address: {
+				"@type": "PostalAddress",
+				addressLocality: "Jabbeke",
+				addressRegion: "West-Vlaanderen",
+				addressCountry: "BE",
+			},
+
+			areaServed: [
+				{
+					"@type": "AdministrativeArea",
+					name: "West-Vlaanderen",
+				},
+				{
+					"@type": "AdministrativeArea",
+					name: "Oost-Vlaanderen",
+				},
+			],
+
+			contactPoint: {
+				"@type": "ContactPoint",
+				telephone: "+32456536037",
+				email: "info@veyosmartsolutions.com",
+				contactType: "customer service",
+				availableLanguage: ["Dutch"],
+				areaServed: "BE",
+			},
+
+			knowsAbout: [
+				"Smart home",
+				"Domotica",
+				"Smart home automatisatie",
+				"WiFi-installatie",
+				"Thuisnetwerken",
+				"Netwerkinstallatie",
+				"Slimme verlichting",
+				"Energiebeheer",
+				"Multiroom audio",
+				"Home cinema",
+				"Slimme deursloten",
+				"Videodeurbellen",
+			],
+
+			sameAs: [
+				"https://www.facebook.com/VeYoSmartSolutions/",
+				"https://www.instagram.com/veyosmartsolutions/",
+			],
 		},
-	],
-	sameAs: [
-		"https://www.facebook.com/VeYoSmartSolutions/",
-		"https://www.instagram.com/veyosmartsolutions/",
+
+		{
+			"@type": "WebPage",
+			"@id": `${canonicalUrl}#webpage`,
+			url: canonicalUrl,
+			name: title,
+			description: description,
+			isPartOf: {
+				"@id": `${siteUrl}/#website`,
+			},
+			about: {
+				"@id": `${siteUrl}/#business`,
+			},
+			inLanguage: "nl-BE",
+		},
 	],
 };
 ---
@@ -91,7 +155,7 @@ const localBusinessSchema = {
 		/>
 		<meta name="theme-color" content="#090909" />
 
-		<!-- Hoofd-URL van deze pagina -->
+		<!-- Canonical -->
 		<link rel="canonical" href={canonicalUrl} />
 
 		<!-- Favicon -->
@@ -100,15 +164,17 @@ const localBusinessSchema = {
 			type="image/png"
 			href="/veyo-favicon.png?v=10"
 		/>
+
 		<link
 			rel="apple-touch-icon"
 			href="/veyo-favicon.png?v=10"
 		/>
 
-		<!-- Open Graph: WhatsApp, Facebook, Messenger, LinkedIn en iMessage -->
+		<!-- Open Graph -->
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="nl_BE" />
 		<meta property="og:site_name" content="VeYo Smart Solutions" />
+
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonicalUrl} />
@@ -118,6 +184,7 @@ const localBusinessSchema = {
 		<meta property="og:image:type" content="image/png" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
+
 		<meta
 			property="og:image:alt"
 			content="VeYo Smart Solutions – Slimmer wonen. Beter leven."
@@ -128,15 +195,16 @@ const localBusinessSchema = {
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content={socialImage} />
+
 		<meta
 			name="twitter:image:alt"
 			content="VeYo Smart Solutions – Slimmer wonen. Beter leven."
 		/>
 
-		<!-- Bedrijfsgegevens voor zoekmachines -->
+		<!-- Structured data -->
 		<script
 			type="application/ld+json"
-			set:html={JSON.stringify(localBusinessSchema)}
+			set:html={JSON.stringify(structuredData)}
 		/>
 
 		<!-- Google Analytics: standaard geen toestemming -->
@@ -158,6 +226,7 @@ const localBusinessSchema = {
 			});
 
 			gtag("js", new Date());
+
 			gtag("config", "G-F18859SKSZ");
 		</script>
 
@@ -170,6 +239,7 @@ const localBusinessSchema = {
 
 	<body>
 		<slot />
+
 		<Footer />
 		<WhatsAppButton />
 		<CookieBanner />

@@ -1,0 +1,468 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+import {
+	House,
+	Lightbulb,
+	Thermometer,
+	Blinds,
+	LockKeyhole,
+	RadioTower,
+	Wifi,
+	Smartphone,
+	Check,
+	ArrowRight,
+	Sparkles,
+	Settings,
+	ShieldCheck,
+} from "lucide-astro";
+
+const title =
+	"Smart Home Jabbeke & West-Vlaanderen | VeYo Smart Solutions";
+
+const description =
+	"Smart home laten installeren in Jabbeke of West-Vlaanderen? VeYo Smart Solutions adviseert, installeert en configureert slimme verlichting, automatisatie, verwarming, sensoren, slimme toegang en meer.";
+
+const solutions = [
+	{
+		icon: Lightbulb,
+		title: "Slimme verlichting",
+		description:
+			"Bedien verlichting automatisch, via sensoren, tijdschema’s, app of stem en creëer de juiste sfeer voor ieder moment.",
+	},
+	{
+		icon: Thermometer,
+		title: "Verwarming & klimaat",
+		description:
+			"Maak verwarming en klimaatregeling slimmer met thermostaten, zones en automatisaties die aansluiten bij uw dagelijks gebruik.",
+	},
+	{
+		icon: Blinds,
+		title: "Zonwering & gordijnen",
+		description:
+			"Automatiseer rolluiken, zonwering en gordijnen op basis van tijd, aanwezigheid of andere slimme apparaten.",
+	},
+	{
+		icon: LockKeyhole,
+		title: "Slimme toegang",
+		description:
+			"Slimme deursloten en toegangsoplossingen waarmee u eenvoudig bepaalt wie toegang heeft tot uw woning of zaak.",
+	},
+	{
+		icon: RadioTower,
+		title: "Sensoren & automatisaties",
+		description:
+			"Laat beweging, deuren, temperatuur en andere gebeurtenissen automatisch acties uitvoeren in uw slimme woning.",
+	},
+	{
+		icon: Wifi,
+		title: "Netwerk & connectiviteit",
+		description:
+			"Een betrouwbare smart home begint bij een stabiel netwerk. We zorgen dat uw slimme apparaten goed verbonden kunnen blijven.",
+	},
+];
+
+const steps = [
+	{
+		number: "01",
+		title: "Kennismaking & advies",
+		description:
+			"We bespreken wat u slimmer wilt maken, welke toestellen al aanwezig zijn en wat uw verwachtingen en budget zijn.",
+	},
+	{
+		number: "02",
+		title: "Oplossing op maat",
+		description:
+			"We selecteren geschikte producten en platformen en bekijken hoe alles logisch met elkaar kan samenwerken.",
+	},
+	{
+		number: "03",
+		title: "Installatie & configuratie",
+		description:
+			"We plaatsen en configureren de gekozen oplossing en zorgen dat automatisaties en bediening correct werken.",
+	},
+	{
+		number: "04",
+		title: "Uitleg & ondersteuning",
+		description:
+			"Na de installatie krijgt u duidelijke uitleg zodat u uw slimme woning zelf eenvoudig kunt bedienen en begrijpen.",
+	},
+];
+
+const benefits = [
+	"Geen standaardpakket maar advies op maat",
+	"Bestaande slimme toestellen kunnen vaak behouden blijven",
+	"Keuze uit verschillende betrouwbare merken en platformen",
+	"Installatie en configuratie door één aanspreekpunt",
+	"Ontworpen om later verder uit te breiden",
+	"Duidelijke uitleg na de installatie",
+];
+---
+
+<Layout title={title} description={description}>
+	<Header />
+
+	<main>
+		<!-- HERO -->
+		<section
+			class="relative overflow-hidden bg-[#090909] pb-24 pt-36 sm:pb-28 sm:pt-40 lg:pb-32 lg:pt-44"
+		>
+			<div
+				class="absolute right-[-180px] top-[-120px] h-[600px] w-[600px] rounded-full bg-[#d4af37]/10 blur-[170px]"
+			></div>
+
+			<div
+				class="absolute left-[-250px] bottom-[-250px] h-[500px] w-[500px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-4xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Smart home • Jabbeke & West-Vlaanderen
+					</p>
+
+					<h1
+						class="mt-6 text-5xl font-black leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl xl:text-8xl"
+					>
+						Een slimme woning die
+						<span class="text-[#d4af37]"> écht voor u werkt.</span>
+					</h1>
+
+					<p
+						class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl"
+					>
+						VeYo Smart Solutions helpt u bij het ontwerpen, installeren en
+						configureren van een gebruiksvriendelijke smart home. Van één
+						slimme toepassing tot verschillende systemen die automatisch
+						samenwerken.
+					</p>
+
+					<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+						<a
+							href="#smart-home-contact"
+							class="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#d4af37] px-7 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+						>
+							Bespreek uw smart home
+							<ArrowRight size={19} strokeWidth={2.3} />
+						</a>
+
+						<a
+							href="#mogelijkheden"
+							class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+						>
+							Ontdek de mogelijkheden
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- INTRO -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div
+				class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+			></div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Meer dan een verzameling apps
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl"
+						>
+							Technologie wordt pas slim wanneer
+							<span class="text-[#d4af37]"> alles samenwerkt.</span>
+						</h2>
+					</div>
+
+					<div>
+						<p class="text-lg leading-8 text-neutral-400">
+							Een smart home hoeft niet te betekenen dat u voor ieder toestel
+							een andere app moet openen. We bekijken hoe verlichting,
+							verwarming, sensoren, zonwering, toegang en andere slimme
+							toepassingen logisch kunnen samenwerken.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Daarbij houden we rekening met uw bestaande installatie en
+							kiezen we oplossingen die passen bij uw woning, wensen en
+							budget. Zo blijft slimme technologie eenvoudig in dagelijks
+							gebruik én klaar voor toekomstige uitbreidingen.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MOGELIJKHEDEN -->
+		<section
+			id="mogelijkheden"
+			class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+		>
+			<div
+				class="absolute -right-40 top-24 h-[480px] w-[480px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Smart home mogelijkheden
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+					>
+						Maak slim wat voor
+						<span class="text-[#d4af37]"> u belangrijk is.</span>
+					</h2>
+
+					<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
+						U hoeft niet meteen een volledige woning te automatiseren.
+						We kunnen klein beginnen en uw installatie later stap voor stap
+						uitbreiden.
+					</p>
+				</div>
+
+				<div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+					{
+						solutions.map(({ icon: Icon, title, description }) => (
+							<article
+								class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55 hover:bg-white/[0.055]"
+							>
+								<div
+									class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition duration-300 group-hover:via-[#d4af37]/80"
+								></div>
+
+								<div
+									class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+									aria-hidden="true"
+								>
+									<Icon
+										size={27}
+										strokeWidth={2}
+										class="transition duration-300 group-hover:scale-110"
+									/>
+								</div>
+
+								<h3 class="mt-6 text-xl font-black text-white">
+									{title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- WAAROM VEYO -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-2 lg:gap-20">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Smart home op maat
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl"
+						>
+							Niet méér technologie.
+							<span class="text-[#d4af37]"> Wel meer gemak.</span>
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							We kiezen niet automatisch voor één merk of één standaardpakket.
+							De oplossing moet passen bij de manier waarop u uw woning
+							gebruikt.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Dat kan een eenvoudige automatisatie zijn, maar ook een
+							uitgebreidere installatie waarbij verschillende slimme
+							systemen centraal worden bediend.
+						</p>
+					</div>
+
+					<ul class="grid gap-4 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<li
+									class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+								>
+									<span
+										class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+										aria-hidden="true"
+									>
+										<Check size={17} strokeWidth={2.5} />
+									</span>
+
+									<span class="leading-7 text-neutral-300">
+										{benefit}
+									</span>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- WERKWIJZE -->
+		<section class="relative overflow-hidden bg-[#090909] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-3xl text-center">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Van idee tot installatie
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+					>
+						Zo bouwen we uw
+						<span class="text-[#d4af37]"> slimme woning.</span>
+					</h2>
+				</div>
+
+				<div class="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+					{
+						steps.map((step) => (
+							<article
+								class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-7"
+							>
+								<p
+									class="text-4xl font-black tracking-[-0.05em] text-[#d4af37]/35"
+								>
+									{step.number}
+								</p>
+
+								<h3 class="mt-5 text-xl font-black text-white">
+									{step.title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{step.description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- PLATFORMEN -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-10 lg:p-12"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[120px]"
+					></div>
+
+					<div class="relative grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+						<div
+							class="flex h-20 w-20 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+						>
+							<House size={38} strokeWidth={1.8} />
+						</div>
+
+						<div>
+							<p
+								class="text-sm font-bold uppercase tracking-[0.22em] text-[#d4af37]"
+							>
+								Merken & platformen
+							</p>
+
+							<h2
+								class="mt-4 text-3xl font-black tracking-[-0.04em] text-white sm:text-4xl"
+							>
+								De juiste technologie voor uw situatie.
+							</h2>
+
+							<p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-400">
+								VeYo Smart Solutions werkt merkonafhankelijk. Afhankelijk
+								van het project kunnen verschillende slimme producten,
+								platformen en ecosystemen worden gecombineerd. Zo kiezen we
+								niet wat toevallig in één pakket zit, maar wat technisch het
+								beste bij uw situatie past.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section
+			id="smart-home-contact"
+			class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+		>
+			<div
+				class="absolute left-1/2 top-1/2 h-[550px] w-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/8 blur-[170px]"
+			></div>
+
+			<div class="relative mx-auto max-w-5xl px-6 text-center lg:px-8">
+				<div
+					class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+				>
+					<Sparkles size={27} strokeWidth={2} />
+				</div>
+
+				<p
+					class="mt-7 text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+				>
+					Uw smart home begint hier
+				</p>
+
+				<h2
+					class="mx-auto mt-5 max-w-4xl text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Benieuwd wat er mogelijk is in
+					<span class="text-[#d4af37]"> uw woning?</span>
+				</h2>
+
+				<p
+					class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-neutral-400"
+				>
+					Vertel ons wat u graag slimmer wilt maken. We bekijken uw wensen
+					en adviseren vrijblijvend welke oplossing bij uw situatie past.
+				</p>
+
+				<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+					<a
+						href="/#contact"
+						class="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#d4af37] px-8 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+					>
+						Vraag vrijblijvend advies
+						<ArrowRight size={19} strokeWidth={2.3} />
+					</a>
+
+					<a
+						href="/#projecten"
+						class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-8 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+					>
+						Bekijk onze realisaties
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

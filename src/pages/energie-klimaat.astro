@@ -1,0 +1,472 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+import {
+	Zap,
+	Gauge,
+	Thermometer,
+	BarChart3,
+	PlugZap,
+	House,
+	Check,
+	ArrowRight,
+	Activity,
+	SlidersHorizontal,
+} from "lucide-astro";
+
+const title =
+	"Energiebeheer & Klimaat Jabbeke | VeYo Smart Solutions";
+
+const description =
+	"VeYo Smart Solutions helpt met energiebeheer, slimme thermostaten, verbruiksmonitoring en klimaatregeling in Jabbeke en West-Vlaanderen. Meer inzicht, comfort en slimme automatisatie.";
+
+const solutions = [
+	{
+		icon: BarChart3,
+		title: "Energieverbruik opvolgen",
+		description:
+			"Krijg beter inzicht in uw elektriciteitsverbruik en ontdek waar energie wordt gebruikt zodat u gerichter kunt bijsturen.",
+	},
+	{
+		icon: PlugZap,
+		title: "Slimme energiemeting",
+		description:
+			"Met geschikte meetoplossingen krijgt u real-time informatie over verbruik, pieken en het gedrag van toestellen in uw woning.",
+	},
+	{
+		icon: Thermometer,
+		title: "Slimme verwarming",
+		description:
+			"Regel verwarming slimmer per ruimte, tijdstip of aanwezigheid en combineer comfort met een efficiënter gebruik van energie.",
+	},
+	{
+		icon: SlidersHorizontal,
+		title: "Klimaatautomatisatie",
+		description:
+			"Laat temperatuur, verwarming, airco of andere klimaatoplossingen automatisch reageren op tijd, aanwezigheid of andere voorwaarden.",
+	},
+	{
+		icon: House,
+		title: "Integratie in smart home",
+		description:
+			"Koppel energie- en klimaatgegevens aan uw smart home zodat andere toestellen en automatisaties hier slim op kunnen reageren.",
+	},
+	{
+		icon: Activity,
+		title: "Monitoring & optimalisatie",
+		description:
+			"We helpen uw systeem logisch op te bouwen zodat u eenvoudig kunt opvolgen, aanpassen en later verder uitbreiden.",
+	},
+];
+
+const benefits = [
+	"Meer inzicht in uw energieverbruik",
+	"Slimmere regeling van verwarming en klimaat",
+	"Automatisaties afgestemd op uw dagelijks gebruik",
+	"Integratie met bestaande smart home-oplossingen",
+	"Mogelijkheid om later verder uit te breiden",
+	"Duidelijke configuratie en uitleg",
+];
+
+const steps = [
+	{
+		number: "01",
+		title: "Uw situatie bespreken",
+		description:
+			"We bekijken welke energie- of klimaatoplossingen al aanwezig zijn en waar u meer inzicht of comfort wilt.",
+	},
+	{
+		number: "02",
+		title: "Geschikte oplossing bepalen",
+		description:
+			"We selecteren meet-, regel- en automatisatieoplossingen die aansluiten bij uw installatie en wensen.",
+	},
+	{
+		number: "03",
+		title: "Installatie & configuratie",
+		description:
+			"De gekozen apparatuur wordt geïnstalleerd, gekoppeld en ingesteld zodat alles logisch samenwerkt.",
+	},
+	{
+		number: "04",
+		title: "Optimaliseren & uitleg",
+		description:
+			"We testen de werking, verfijnen automatisaties en leggen duidelijk uit hoe u alles zelf kunt opvolgen en bedienen.",
+	},
+];
+---
+
+<Layout title={title} description={description}>
+	<Header />
+
+	<main>
+		<!-- HERO -->
+		<section
+			class="relative overflow-hidden bg-[#090909] pb-24 pt-36 sm:pb-28 sm:pt-40 lg:pb-32 lg:pt-44"
+		>
+			<div
+				class="absolute right-[-180px] top-[-120px] h-[600px] w-[600px] rounded-full bg-[#d4af37]/10 blur-[170px]"
+			></div>
+
+			<div
+				class="absolute left-[-250px] bottom-[-250px] h-[500px] w-[500px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-4xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Energiebeheer & klimaat • Jabbeke & West-Vlaanderen
+					</p>
+
+					<h1
+						class="mt-6 text-5xl font-black leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl xl:text-8xl"
+					>
+						Meer inzicht.
+						<span class="block text-[#d4af37]">
+							Meer controle over uw energie en comfort.
+						</span>
+					</h1>
+
+					<p
+						class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl"
+					>
+						VeYo Smart Solutions helpt u energieverbruik beter op te volgen
+						en verwarming of klimaat slimmer te regelen. Van real-time
+						monitoring tot slimme thermostaten en automatisaties die
+						aansluiten bij uw dagelijks gebruik.
+					</p>
+
+					<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+						<a
+							href="#energie-contact"
+							class="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#d4af37] px-7 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+						>
+							Bespreek uw energieoplossing
+							<ArrowRight size={19} strokeWidth={2.3} />
+						</a>
+
+						<a
+							href="#mogelijkheden"
+							class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+						>
+							Ontdek de mogelijkheden
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- INTRO -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div
+				class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+			></div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Inzicht als vertrekpunt
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl"
+						>
+							Wat u kunt meten,
+							<span class="block text-[#d4af37]">
+								kunt u slimmer gebruiken.
+							</span>
+						</h2>
+					</div>
+
+					<div>
+						<p class="text-lg leading-8 text-neutral-400">
+							Energiebeheer begint met weten waar uw verbruik vandaan komt.
+							Met slimme monitoring krijgt u een beter beeld van uw
+							elektriciteitsverbruik en kunt u patronen, pieken en
+							veranderingen sneller herkennen.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Daarnaast kunnen verwarming en klimaatregeling slimmer worden
+							afgestemd op aanwezigheid, tijdschema's en uw dagelijkse
+							routine. Zo krijgt u meer comfort zonder dat bediening
+							ingewikkeld hoeft te worden.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MOGELIJKHEDEN -->
+		<section
+			id="mogelijkheden"
+			class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+		>
+			<div
+				class="absolute -right-40 top-24 h-[480px] w-[480px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Energie & klimaat
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+					>
+						Slimme oplossingen voor
+						<span class="text-[#d4af37]"> inzicht en comfort.</span>
+					</h2>
+
+					<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
+						We bekijken welke metingen, regelingen en automatisaties nuttig
+						zijn in uw woning en bouwen een oplossing die eenvoudig blijft
+						in dagelijks gebruik.
+					</p>
+				</div>
+
+				<div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+					{
+						solutions.map(({ icon: Icon, title, description }) => (
+							<article
+								class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55 hover:bg-white/[0.055]"
+							>
+								<div
+									class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition duration-300 group-hover:via-[#d4af37]/80"
+								></div>
+
+								<div
+									class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+									aria-hidden="true"
+								>
+									<Icon
+										size={27}
+										strokeWidth={2}
+										class="transition duration-300 group-hover:scale-110"
+									/>
+								</div>
+
+								<h3 class="mt-6 text-xl font-black text-white">
+									{title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- WAAROM -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-2 lg:gap-20">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Slim omgaan met energie
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl"
+						>
+							Geen ingewikkeld dashboard.
+							<span class="block text-[#d4af37]">
+								Wel bruikbare informatie.
+							</span>
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							Het doel is niet om zoveel mogelijk cijfers te verzamelen,
+							maar om informatie begrijpelijk en bruikbaar te maken.
+							Zo ziet u sneller wat er gebeurt en kunt u automatisaties
+							instellen die echt iets toevoegen.
+						</p>
+					</div>
+
+					<ul class="grid gap-4 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<li
+									class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+								>
+									<span
+										class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+										aria-hidden="true"
+									>
+										<Check size={17} strokeWidth={2.5} />
+									</span>
+
+									<span class="leading-7 text-neutral-300">
+										{benefit}
+									</span>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- WERKWIJZE -->
+		<section class="relative overflow-hidden bg-[#090909] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-3xl text-center">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Van inzicht tot automatisatie
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+					>
+						Zo maken we energie en klimaat
+						<span class="text-[#d4af37]"> slimmer.</span>
+					</h2>
+				</div>
+
+				<div class="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+					{
+						steps.map((step) => (
+							<article
+								class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-7"
+							>
+								<p
+									class="text-4xl font-black tracking-[-0.05em] text-[#d4af37]/35"
+								>
+									{step.number}
+								</p>
+
+								<h3 class="mt-5 text-xl font-black text-white">
+									{step.title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{step.description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- INFO BLOK -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-10 lg:p-12"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[120px]"
+					></div>
+
+					<div
+						class="relative grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center"
+					>
+						<div
+							class="flex h-20 w-20 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+						>
+							<Gauge size={38} strokeWidth={1.8} />
+						</div>
+
+						<div>
+							<p
+								class="text-sm font-bold uppercase tracking-[0.22em] text-[#d4af37]"
+							>
+								Passend bij uw installatie
+							</p>
+
+							<h2
+								class="mt-4 text-3xl font-black tracking-[-0.04em] text-white sm:text-4xl"
+							>
+								Elke woning gebruikt energie anders.
+							</h2>
+
+							<p
+								class="mt-5 max-w-3xl text-lg leading-8 text-neutral-400"
+							>
+								We bekijken daarom eerst uw bestaande installatie en
+								doelstellingen. Afhankelijk van uw situatie kunnen
+								monitoring, slimme thermostaten, sensoren en smart
+								home-integraties worden gecombineerd tot één overzichtelijke
+								oplossing.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section
+			id="energie-contact"
+			class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+		>
+			<div
+				class="absolute left-1/2 top-1/2 h-[550px] w-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/8 blur-[170px]"
+			></div>
+
+			<div class="relative mx-auto max-w-5xl px-6 text-center lg:px-8">
+				<div
+					class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+				>
+					<Zap size={27} strokeWidth={2} />
+				</div>
+
+				<p
+					class="mt-7 text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+				>
+					Meer inzicht begint hier
+				</p>
+
+				<h2
+					class="mx-auto mt-5 max-w-4xl text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Meer controle over uw energie,
+					<span class="text-[#d4af37]"> zonder extra complexiteit.</span>
+				</h2>
+
+				<p
+					class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-neutral-400"
+				>
+					Vertel ons waar u meer inzicht, comfort of automatisatie wilt.
+					We bekijken welke energie- en klimaatoplossing bij uw woning past.
+				</p>
+
+				<div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+					<a
+						href="/#contact"
+						class="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#d4af37] px-8 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+					>
+						Vraag vrijblijvend advies
+						<ArrowRight size={19} strokeWidth={2.3} />
+					</a>
+
+					<a
+						href="/#projecten"
+						class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-8 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+					>
+						Bekijk onze realisaties
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

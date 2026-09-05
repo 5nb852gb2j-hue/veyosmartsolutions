@@ -1,0 +1,465 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+
+import {
+	ShieldCheck,
+	Camera,
+	BellRing,
+	ScanEye,
+	Smartphone,
+	House,
+	Check,
+	ArrowRight,
+	Wifi,
+	Settings,
+} from "lucide-astro";
+
+const title =
+	"Camera's & slimme beveiliging | VeYo Smart Solutions";
+
+const description =
+	"VeYo Smart Solutions biedt slimme beveiligingsoplossingen met camera's, videodeurbellen, sensoren en smart home-integraties voor woningen en kleine bedrijven.";
+
+const solutions = [
+	{
+		icon: Camera,
+		title: "Camerabewaking",
+		description:
+			"Camera-oplossingen voor binnen en buiten waarmee u belangrijke zones rond uw woning of zaak eenvoudig kunt opvolgen.",
+	},
+	{
+		icon: BellRing,
+		title: "Slimme videodeurbellen",
+		description:
+			"Zie wie er aanbelt, ontvang meldingen en communiceer met bezoekers via een gebruiksvriendelijke slimme videodeurbel.",
+	},
+	{
+		icon: ScanEye,
+		title: "Slimme detectie",
+		description:
+			"Gebruik bewegingsdetectie en slimme meldingen om sneller op de hoogte te zijn van gebeurtenissen rond uw woning.",
+	},
+	{
+		icon: Smartphone,
+		title: "Bediening via app",
+		description:
+			"Bekijk beelden, ontvang meldingen en beheer uw beveiligingsoplossing eenvoudig vanaf uw smartphone.",
+	},
+	{
+		icon: House,
+		title: "Smart home-integratie",
+		description:
+			"Laat compatibele beveiligingsapparatuur samenwerken met andere slimme toepassingen en automatisaties in uw woning.",
+	},
+	{
+		icon: Wifi,
+		title: "Netwerk & connectiviteit",
+		description:
+			"Een betrouwbare beveiligingsoplossing begint bij een stabiele verbinding. We houden daarom ook rekening met wifi en netwerkdekking.",
+	},
+];
+
+const benefits = [
+	"Oplossing afgestemd op uw woning of zaak",
+	"Camera's voor binnen en buiten",
+	"Slimme videodeurbellen en meldingen",
+	"Gebruiksvriendelijke bediening via app",
+	"Integratie met compatibele smart home-systemen",
+	"Duidelijke configuratie en uitleg",
+];
+
+const steps = [
+	{
+		number: "01",
+		title: "Uw situatie bespreken",
+		description:
+			"We bekijken wat u wilt opvolgen en welke slimme beveiligingsoplossingen relevant zijn voor uw situatie.",
+	},
+	{
+		number: "02",
+		title: "Oplossing bepalen",
+		description:
+			"We zoeken geschikte apparatuur en bekijken onder andere plaatsing, bereik, voeding en netwerkverbinding.",
+	},
+	{
+		number: "03",
+		title: "Installatie & configuratie",
+		description:
+			"De gekozen apparatuur wordt geplaatst en correct ingesteld voor een betrouwbare en gebruiksvriendelijke werking.",
+	},
+	{
+		number: "04",
+		title: "Testen & uitleg",
+		description:
+			"We testen de installatie en leggen duidelijk uit hoe u beelden, meldingen en instellingen zelf kunt beheren.",
+	},
+];
+---
+
+<Layout
+	title={title}
+	description={description}
+>
+	<Header />
+
+	<main>
+		<!-- HERO -->
+		<section
+			class="relative overflow-hidden bg-[#090909] pb-24 pt-36 sm:pb-28 sm:pt-40 lg:pb-32 lg:pt-44"
+		>
+			<div
+				class="absolute right-[-180px] top-[-120px] h-[600px] w-[600px] rounded-full bg-[#d4af37]/10 blur-[170px]"
+			></div>
+
+			<div
+				class="absolute left-[-250px] bottom-[-250px] h-[500px] w-[500px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-4xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Camera's & slimme beveiliging
+					</p>
+
+					<h1
+						class="mt-6 text-5xl font-black leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl xl:text-8xl"
+					>
+						Meer zicht op wat er gebeurt.
+						<span class="block text-[#d4af37]">
+							Ook wanneer u niet thuis bent.
+						</span>
+					</h1>
+
+					<p
+						class="mt-8 max-w-3xl text-lg leading-8 text-neutral-300 sm:text-xl"
+					>
+						VeYo Smart Solutions helpt bij het kiezen, plaatsen en
+						configureren van slimme beveiligingsoplossingen zoals camera's,
+						videodeurbellen en sensoren, afgestemd op uw woning, netwerk en
+						dagelijks gebruik.
+					</p>
+
+					<div class="mt-10 flex flex-col gap-4 sm:flex-row">
+						<a
+							href="#beveiliging-contact"
+							class="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#d4af37] px-7 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+						>
+							Bespreek uw situatie
+							<ArrowRight size={19} strokeWidth={2.3} />
+						</a>
+
+						<a
+							href="#mogelijkheden"
+							class="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/15 px-7 font-bold text-white transition duration-300 hover:-translate-y-1 hover:border-[#d4af37] hover:text-[#d4af37]"
+						>
+							Ontdek de mogelijkheden
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- INTRO -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div
+				class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
+			></div>
+
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20"
+				>
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Slimme beveiliging
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl"
+						>
+							Technologie die helpt
+							<span class="block text-[#d4af37]">
+								om overzicht te behouden.
+							</span>
+						</h2>
+					</div>
+
+					<div>
+						<p class="text-lg leading-8 text-neutral-400">
+							Een slimme beveiligingsoplossing moet vooral betrouwbaar en
+							eenvoudig te gebruiken zijn. Daarom kijken we niet alleen naar
+							de apparatuur, maar ook naar plaatsing, bereik, netwerk en
+							dagelijks gebruik.
+						</p>
+
+						<p class="mt-5 text-lg leading-8 text-neutral-400">
+							Zo ontstaat een oplossing waarmee u eenvoudig kunt zien wat er
+							rond uw woning gebeurt en relevante meldingen kunt ontvangen
+							wanneer dat nodig is.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MOGELIJKHEDEN -->
+		<section
+			id="mogelijkheden"
+			class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+		>
+			<div
+				class="absolute -right-40 top-24 h-[480px] w-[480px] rounded-full bg-[#d4af37]/5 blur-[150px]"
+			></div>
+
+			<div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="max-w-3xl">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Mogelijkheden
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+					>
+						Slimme beveiliging
+						<span class="text-[#d4af37]"> op maat.</span>
+					</h2>
+
+					<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
+						We bekijken welke oplossingen relevant zijn voor uw situatie en
+						hoe deze betrouwbaar kunnen worden geïntegreerd in uw woning of
+						zaak.
+					</p>
+				</div>
+
+				<div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+					{
+						solutions.map(({ icon: Icon, title, description }) => (
+							<article
+								class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.035] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#d4af37]/55 hover:bg-white/[0.055]"
+							>
+								<div
+									class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37]/0 to-transparent transition duration-300 group-hover:via-[#d4af37]/80"
+								></div>
+
+								<div
+									class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+									aria-hidden="true"
+								>
+									<Icon
+										size={27}
+										strokeWidth={2}
+										class="transition duration-300 group-hover:scale-110"
+									/>
+								</div>
+
+								<h3 class="mt-6 text-xl font-black text-white">
+									{title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- VOORDELEN -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="grid gap-14 lg:grid-cols-2 lg:gap-20">
+					<div>
+						<p
+							class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+						>
+							Eén geheel
+						</p>
+
+						<h2
+							class="mt-5 text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl"
+						>
+							Niet zomaar apparatuur.
+							<span class="block text-[#d4af37]">
+								Een oplossing die logisch werkt.
+							</span>
+						</h2>
+
+						<p class="mt-7 text-lg leading-8 text-neutral-400">
+							We bekijken de volledige situatie en houden rekening met uw
+							bestaande netwerk en slimme apparatuur. Zo blijft de oplossing
+							overzichtelijk en eenvoudig te gebruiken.
+						</p>
+					</div>
+
+					<ul class="grid gap-4 sm:grid-cols-2">
+						{
+							benefits.map((benefit) => (
+								<li
+									class="flex items-start gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+								>
+									<span
+										class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+										aria-hidden="true"
+									>
+										<Check size={17} strokeWidth={2.5} />
+									</span>
+
+									<span class="leading-7 text-neutral-300">
+										{benefit}
+									</span>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- WERKWIJZE -->
+		<section class="relative overflow-hidden bg-[#090909] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div class="mx-auto max-w-3xl text-center">
+					<p
+						class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+					>
+						Van advies tot configuratie
+					</p>
+
+					<h2
+						class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+					>
+						Zo bouwen we uw
+						<span class="text-[#d4af37]"> slimme beveiliging.</span>
+					</h2>
+				</div>
+
+				<div class="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+					{
+						steps.map((step) => (
+							<article
+								class="relative rounded-2xl border border-white/10 bg-white/[0.03] p-7"
+							>
+								<p
+									class="text-4xl font-black tracking-[-0.05em] text-[#d4af37]/35"
+								>
+									{step.number}
+								</p>
+
+								<h3 class="mt-5 text-xl font-black text-white">
+									{step.title}
+								</h3>
+
+								<p class="mt-3 leading-7 text-neutral-400">
+									{step.description}
+								</p>
+							</article>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- INFO -->
+		<section class="relative bg-[#0d0d0d] py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<div
+					class="relative overflow-hidden rounded-3xl border border-[#d4af37]/25 bg-[#111111] p-8 sm:p-10 lg:p-12"
+				>
+					<div
+						class="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#d4af37]/10 blur-[120px]"
+					></div>
+
+					<div
+						class="relative grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center"
+					>
+						<div
+							class="flex h-20 w-20 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+						>
+							<Settings size={38} strokeWidth={1.8} />
+						</div>
+
+						<div>
+							<p
+								class="text-sm font-bold uppercase tracking-[0.22em] text-[#d4af37]"
+							>
+								Passend bij uw situatie
+							</p>
+
+							<h2
+								class="mt-4 text-3xl font-black tracking-[-0.04em] text-white sm:text-4xl"
+							>
+								Geen woning of situatie is hetzelfde.
+							</h2>
+
+							<p
+								class="mt-5 max-w-3xl text-lg leading-8 text-neutral-400"
+							>
+								We bekijken daarom eerst wat u precies wilt bereiken en
+								welke infrastructuur al aanwezig is. Op basis daarvan
+								stellen we een praktische oplossing samen die past bij uw
+								woning, netwerk en manier van gebruik.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section
+			id="beveiliging-contact"
+			class="relative overflow-hidden bg-[#090909] py-24 sm:py-32"
+		>
+			<div
+				class="absolute left-1/2 top-1/2 h-[550px] w-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/8 blur-[170px]"
+			></div>
+
+			<div class="relative mx-auto max-w-5xl px-6 text-center lg:px-8">
+				<div
+					class="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
+				>
+					<ShieldCheck size={27} strokeWidth={2} />
+				</div>
+
+				<p
+					class="mt-7 text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+				>
+					Slimme beveiliging
+				</p>
+
+				<h2
+					class="mx-auto mt-5 max-w-4xl text-4xl font-black leading-tight tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
+				>
+					Meer controle over
+					<span class="text-[#d4af37]"> wat er rond uw woning gebeurt.</span>
+				</h2>
+
+				<p
+					class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-neutral-400"
+				>
+					Vertel ons wat u wilt beveiligen of opvolgen. We bekijken welke
+					slimme oplossing technisch en praktisch bij uw situatie past.
+				</p>
+
+				<div class="mt-10">
+					<a
+						href="/#contact"
+						class="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-[#d4af37] px-8 font-black text-black transition duration-300 hover:-translate-y-1 hover:bg-white"
+					>
+						Vraag vrijblijvend advies
+						<ArrowRight size={19} strokeWidth={2.3} />
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>

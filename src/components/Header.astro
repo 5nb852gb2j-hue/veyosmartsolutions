@@ -2,15 +2,48 @@
 import {
 	FileText,
 	MessageCircle,
+	ChevronDown,
+	House,
+	Wifi,
+	Lightbulb,
+	Zap,
+	Speaker,
 } from "lucide-astro";
 
 const navigation = [
-	{ label: "Diensten", href: "/#diensten" },
 	{ label: "Projecten", href: "/#projecten" },
 	{ label: "Merken", href: "/#merken" },
 	{ label: "FAQ", href: "/#faq" },
 	{ label: "Over VeYo", href: "/#over-veyo" },
 	{ label: "Contact", href: "/#contact" },
+];
+
+const serviceLinks = [
+	{
+		label: "Smart home & automatisatie",
+		href: "/smart-home",
+		icon: House,
+	},
+	{
+		label: "WiFi & netwerken",
+		href: "/wifi-netwerken",
+		icon: Wifi,
+	},
+	{
+		label: "Slimme verlichting",
+		href: "/slimme-verlichting",
+		icon: Lightbulb,
+	},
+	{
+		label: "Energie & klimaat",
+		href: "/energie-klimaat",
+		icon: Zap,
+	},
+	{
+		label: "Audio & home cinema",
+		href: "/audio-home-cinema",
+		icon: Speaker,
+	},
 ];
 ---
 
@@ -44,6 +77,54 @@ const navigation = [
 				class="hidden items-center gap-7 lg:flex"
 				aria-label="Hoofdnavigatie"
 			>
+				<!-- Diensten dropdown -->
+				<div class="group/services relative">
+					<a
+						href="/#diensten"
+						class="flex items-center gap-1.5 rounded-md py-7 text-sm font-bold text-neutral-300 outline-none transition duration-300 hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+					>
+						Diensten
+
+						<ChevronDown
+							size={16}
+							strokeWidth={2.2}
+							aria-hidden="true"
+							class="transition duration-300 group-hover/services:rotate-180"
+						/>
+					</a>
+
+					<div
+						class="pointer-events-none absolute left-0 top-full w-[340px] translate-y-2 rounded-2xl border border-white/10 bg-[#101010]/98 p-3 opacity-0 shadow-2xl backdrop-blur-xl transition duration-200 group-hover/services:pointer-events-auto group-hover/services:translate-y-0 group-hover/services:opacity-100"
+					>
+						<div class="space-y-1">
+							{
+								serviceLinks.map(({ label, href, icon: Icon }) => (
+									<a
+										href={href}
+										class="group/item flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-bold text-neutral-300 transition duration-300 hover:bg-white/[0.05] hover:text-[#d4af37]"
+									>
+										<span
+											class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#d4af37]/25 bg-[#d4af37]/10 text-[#d4af37]"
+											aria-hidden="true"
+										>
+											<Icon size={18} strokeWidth={2} />
+										</span>
+
+										<span>{label}</span>
+									</a>
+								))
+							}
+						</div>
+
+						<a
+							href="/#diensten"
+							class="mt-2 flex items-center justify-center rounded-xl border border-white/10 px-4 py-3 text-sm font-bold text-neutral-400 transition hover:border-[#d4af37]/40 hover:text-white"
+						>
+							Bekijk alle oplossingen
+						</a>
+					</div>
+				</div>
+
 				{
 					navigation.map((item) => (
 						<a
@@ -98,9 +179,37 @@ const navigation = [
 				</summary>
 
 				<div
-					class="absolute right-0 top-16 w-[min(88vw,340px)] overflow-hidden rounded-2xl border border-white/10 bg-[#101010]/95 p-3 shadow-2xl backdrop-blur-xl"
+					class="absolute right-0 top-16 max-h-[75vh] w-[min(88vw,360px)] overflow-y-auto rounded-2xl border border-white/10 bg-[#101010]/95 p-3 shadow-2xl backdrop-blur-xl"
 				>
 					<nav class="flex flex-col" aria-label="Mobiele navigatie">
+
+						<a
+							href="/#diensten"
+							class="rounded-xl px-4 py-3.5 font-black text-white transition hover:bg-white/[0.05] hover:text-[#d4af37]"
+						>
+							Diensten
+						</a>
+
+						<div class="mb-2 ml-2 border-l border-[#d4af37]/20 pl-2">
+							{
+								serviceLinks.map(({ label, href, icon: Icon }) => (
+									<a
+										href={href}
+										class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-bold text-neutral-400 transition hover:bg-white/[0.05] hover:text-[#d4af37]"
+									>
+										<Icon
+											size={17}
+											strokeWidth={2}
+											aria-hidden="true"
+											class="shrink-0 text-[#d4af37]"
+										/>
+
+										<span>{label}</span>
+									</a>
+								))
+							}
+						</div>
+
 						{
 							navigation.map((item) => (
 								<a

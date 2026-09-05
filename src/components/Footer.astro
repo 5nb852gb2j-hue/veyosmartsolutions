@@ -26,12 +26,34 @@ const quickLinks = [
 ];
 
 const services = [
-	"Smart home & automatisatie",
-	"WiFi & netwerken",
-	"Slimme verlichting",
-	"Camera’s & beveiliging",
-	"Audio & home cinema",
-	"Slimme toegang",
+	{
+		label: "Smart home & automatisatie",
+		href: "/smart-home",
+	},
+	{
+		label: "WiFi & netwerken",
+		href: "/wifi-netwerken",
+	},
+	{
+		label: "Slimme verlichting",
+		href: "/slimme-verlichting",
+	},
+	{
+		label: "Camera’s & beveiliging",
+		href: "/#diensten",
+	},
+	{
+		label: "Energie & klimaat",
+		href: "/energie-klimaat",
+	},
+	{
+		label: "Audio & home cinema",
+		href: "/audio-home-cinema",
+	},
+	{
+		label: "Slimme toegang",
+		href: "/#diensten",
+	},
 ];
 
 const strengths = [
@@ -225,10 +247,17 @@ const socialLinks = [
 						services.map((service) => (
 							<li>
 								<a
-									href="/#diensten"
-									class="rounded-md text-neutral-400 outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
+									href={service.href}
+									class="group inline-flex items-center gap-2 rounded-md text-neutral-400 outline-none transition hover:text-white focus-visible:ring-2 focus-visible:ring-[#d4af37]/60"
 								>
-									{service}
+									<span>{service.label}</span>
+
+									<ArrowRight
+										size={14}
+										strokeWidth={2}
+										aria-hidden="true"
+										class="translate-x-0 text-[#d4af37] opacity-0 transition duration-300 group-hover:translate-x-1 group-hover:opacity-100"
+									/>
 								</a>
 							</li>
 						))

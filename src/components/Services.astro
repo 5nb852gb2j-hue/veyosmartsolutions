@@ -7,69 +7,92 @@ import {
 	Zap,
 	Speaker,
 } from "lucide-astro";
+
 const services = [
 	{
 		icon: House,
-		title: "Smart home automatisatie",
+		title: "Smart home & automatisatie",
 		description:
-			"Laat verlichting, verwarming, zonwering, beveiliging en andere systemen slim samenwerken in één gebruiksvriendelijke omgeving.",
+			"Maak uw woning slimmer met verlichting, verwarming, zonwering, beveiliging en andere systemen die automatisch samenwerken in één gebruiksvriendelijke omgeving.",
+		href: "/smart-home",
+		linkText: "Ontdek smart home",
 	},
 	{
 		icon: Wifi,
-		title: "WiFi & netwerken",
+		title: "Professionele WiFi & netwerken",
 		description:
-			"Sterk en stabiel internet in elke ruimte, met professionele plaatsing en configuratie van uw netwerk.",
+			"Sterk en stabiel internet in elke ruimte, met professionele plaatsing, optimalisatie en configuratie van uw thuis- of bedrijfsnetwerk.",
+		href: "/wifi-netwerken",
+		linkText: "Ontdek WiFi & netwerken",
 	},
 	{
 		icon: Lightbulb,
 		title: "Slimme verlichting",
 		description:
-			"Comfortabele verlichting binnen en buiten, bedienbaar via app, automatisaties, sensoren of stem.",
+			"Slimme verlichting voor binnen en buiten, bedienbaar via app, automatisaties, sensoren, tijdschema’s of stem.",
+		href: "/slimme-verlichting",
+		linkText: "Ontdek slimme verlichting",
 	},
 	{
 		icon: ShieldCheck,
-		title: "Camera's & beveiliging",
+		title: "Camera’s & slimme beveiliging",
 		description:
-			"Camera's, slimme deurbellen, alarmsystemen en sensoren voor meer controle en een veiliger gevoel.",
+			"Camera’s, videodeurbellen, alarmsystemen en sensoren voor meer controle, inzicht en een veiliger gevoel rondom uw woning of zaak.",
+		href: "#contact",
+		linkText: "Meer informatie",
 	},
 	{
 		icon: Zap,
-		title: "Energie & klimaat",
+		title: "Energiebeheer & klimaat",
 		description:
-			"Meer inzicht en comfort met energiebeheer, slimme thermostaten, airco-integraties en automatische regelingen.",
+			"Meer inzicht en comfort met energiebeheer, slimme thermostaten, airco-integraties, monitoring en automatische regelingen.",
+		href: "/energie-klimaat",
+		linkText: "Ontdek energie & klimaat",
 	},
 	{
 		icon: Speaker,
 		title: "Audio & home cinema",
 		description:
-			"Multiroom audio, surround sound en entertainmentoplossingen die volledig aansluiten bij uw woning.",
+			"Multiroom audio, surround sound en home-cinemaoplossingen die volledig aansluiten bij uw woning en dagelijks gebruik.",
+		href: "/audio-home-cinema",
+		linkText: "Ontdek audio & home cinema",
 	},
 ];
 ---
 
-<section id="diensten" class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32">
+<section
+	id="diensten"
+	class="relative overflow-hidden bg-[#0d0d0d] py-24 sm:py-32"
+	aria-labelledby="diensten-titel"
+>
 	<div
 		class="absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent"
 	></div>
 
 	<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		<div class="max-w-3xl">
-			<p class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]">
+			<p
+				class="text-sm font-bold uppercase tracking-[0.24em] text-[#d4af37]"
+			>
 				Onze oplossingen
 			</p>
 
 			<h2
+				id="diensten-titel"
 				class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl"
 			>
-				Alles voor een slimmer,
-				<span class="text-[#d4af37]"> veiliger en comfortabelere </span>
-				 woning.
+				Alles voor een slimmer, 
+				<span class="text-[#d4af37]">{" "}
+					 veiliger en comfortabeler
+				</span>{" "}
+			thuis.
 			</h2>
 
 			<p class="mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
-				Van één slimme schakelaar tot een volledig geïntegreerde woning:
-				VeYo Smart Solutions adviseert, installeert en configureert een
-				oplossing die echt bij u past.
+				VeYo Smart Solutions adviseert, installeert en configureert slimme
+				oplossingen voor woningen en kleine bedrijven in Jabbeke,
+				West-Vlaanderen en Oost-Vlaanderen. Van één slimme schakelaar tot een
+				volledig geïntegreerde smart home-installatie.
 			</p>
 		</div>
 
@@ -84,14 +107,14 @@ const services = [
 						></div>
 
 						<div
-							class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-2xl font-bold text-[#d4af37]"
+							class="flex h-12 w-12 items-center justify-center rounded-xl border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37]"
 							aria-hidden="true"
 						>
 							<service.icon
-	size={28}
-	strokeWidth={2}
-	class="text-[#d4af37] transition duration-300 group-hover:scale-110"
-/>
+								size={28}
+								strokeWidth={2}
+								class="text-[#d4af37] transition duration-300 group-hover:scale-110"
+							/>
 						</div>
 
 						<h3 class="mt-6 text-xl font-bold text-white">
@@ -103,10 +126,10 @@ const services = [
 						</p>
 
 						<a
-							href="#contact"
+							href={service.href}
 							class="mt-6 inline-flex items-center gap-2 font-bold text-[#d4af37] transition group-hover:gap-3"
 						>
-							Meer informatie
+							{service.linkText}
 							<span aria-hidden="true">→</span>
 						</a>
 					</article>
@@ -121,9 +144,10 @@ const services = [
 				<h3 class="text-xl font-bold text-white">
 					Een specifieke oplossing in gedachten?
 				</h3>
+
 				<p class="mt-2 text-neutral-400">
-					We bekijken samen wat technisch mogelijk is en stellen een oplossing
-					op maat voor.
+					We bekijken samen wat technisch mogelijk is en stellen een
+					betrouwbare oplossing op maat voor.
 				</p>
 			</div>
 
